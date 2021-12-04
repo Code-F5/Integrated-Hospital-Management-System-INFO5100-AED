@@ -12,6 +12,7 @@ import Business.Role.CustomerRole;
 import Business.Role.DeliverManRole;
 import Business.Role.SystemAdminRole;
 import Business.UserAccount.UserAccount;
+import Business.Volunteer.Volunteer;
 import Business.WorkQueue.WorkQueue;
 import Business.WorkQueue.WorkRequest;
 
@@ -37,10 +38,17 @@ public class ConfigureASystem {
         UserAccount ur1 = system.getUserAccountDirectory().createUserAccount("restaurant1", "restaurant1", new AdminRole());
         UserAccount uc1 = system.getUserAccountDirectory().createUserAccount("customer1", "customer1", new CustomerRole());
         UserAccount ud1 = system.getUserAccountDirectory().createUserAccount("deliveryMan1", "deliveryMan1", new DeliverManRole());
+        UserAccount uv = system.getUserAccountDirectory().createUserAccount("Volunteer1", "Volunteer1", new SystemAdminRole());
+        
+        Volunteer v1=system.getVolunteerDirectory().addVolunteer();
+        v1.setName("volunteer1");
+        
         Customer c1=system.getCustomerDirectory().addCustomer();
         c1.setName("customer1");
+        
         DeliveryMan d1=system.getDeliveryManDirectory().addDeliveryMan();
         d1.setName("deliveryMan1");
+                
         Restaurant r1=system.getRestaurantDirectory().addRestaurant();
         r1.setName("restaurant1");
         Menu m1=new Menu();

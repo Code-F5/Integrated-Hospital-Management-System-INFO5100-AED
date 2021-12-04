@@ -24,7 +24,7 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageCustomer
      */
-        JPanel userProcessContainer;
+    JPanel userProcessContainer;
     EcoSystem ecosystem;
     CustomerDirectory customerDirectory;
     UserAccountDirectory userAccountDirectory;
@@ -145,8 +145,8 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel1)
                     .addComponent(jButton4))
                 .addGap(33, 33, 33)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(135, 135, 135)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)

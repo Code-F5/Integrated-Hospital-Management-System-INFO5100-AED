@@ -11,6 +11,7 @@ import Business.DeliveryMan.DeliveryManDirectory;
 import Business.Restaurant.RestaurantDirectory;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
+import Business.Volunteer.VolunteerDirectory;
 import java.util.ArrayList;
 
 
@@ -20,6 +21,15 @@ public class EcoSystem extends Organization{
     private RestaurantDirectory restaurantDirectory=new RestaurantDirectory();
     private CustomerDirectory customerDirectory=new CustomerDirectory() ;
     private DeliveryManDirectory deliveryManDirectory=new DeliveryManDirectory();
+    private VolunteerDirectory volunteerDirectory=new VolunteerDirectory();
+
+    public VolunteerDirectory getVolunteerDirectory() {
+        return volunteerDirectory;
+    }
+
+    public void setVolunteerDirectory(VolunteerDirectory volunteerDirectory) {
+        this.volunteerDirectory = volunteerDirectory;
+    }
 
     public RestaurantDirectory getRestaurantDirectory() {
         return restaurantDirectory;

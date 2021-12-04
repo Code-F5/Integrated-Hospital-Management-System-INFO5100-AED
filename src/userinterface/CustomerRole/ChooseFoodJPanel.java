@@ -128,7 +128,7 @@ public class ChooseFoodJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
           int row = jTable1.getSelectedRow();
         if(row<0){
-            JOptionPane.showMessageDialog(null, "Please select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please select a row!!!!!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         Food f = (Food) jTable1.getValueAt(row, 0);
