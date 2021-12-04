@@ -7,10 +7,7 @@ package Business.Customer;
 
 import Business.WorkQueue.WorkQueue;
 
-/**
- *
- * @author harold
- */
+
 public class Customer {
     private String name;
     WorkQueue workQueue;

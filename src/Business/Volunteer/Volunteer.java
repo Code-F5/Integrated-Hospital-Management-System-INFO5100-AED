@@ -4,10 +4,7 @@ package Business.Volunteer;
 
 import Business.WorkQueue.WorkQueue;
 
-/**
- *
- * @author harold
- */
+
 public class Volunteer {
     private String name;
     WorkQueue workQueue;

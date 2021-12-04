@@ -10,6 +10,8 @@ import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
+import Business.Volunteer.Volunteer;
+import Business.Volunteer.VolunteerDirectory;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -26,13 +28,13 @@ public class ManageVolunteerJPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    CustomerDirectory customerDirectory;
+    VolunteerDirectory volunteerDirectory;
     UserAccountDirectory userAccountDirectory;
     ManageVolunteerJPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.ecosystem=ecosystem;
-        this.customerDirectory=ecosystem.getCustomerDirectory();
+        this.volunteerDirectory=ecosystem.getVolunteerDirectory();
         this.userAccountDirectory=ecosystem.getUserAccountDirectory();
            refreshTable();
     }
@@ -43,7 +45,7 @@ public void refreshTable(){
             model.removeRow(i);
         }
         for(UserAccount userAccount:userAccountDirectory.getUserAccountList()){
-            if(userAccount.getRole().toString()=="Business.Role.CustomerRole"){
+            if(userAccount.getRole().toString()=="Business.Role.VolunteerRole"){
             Object row[] = new Object[2];
             row[0] = userAccount;
             row[1] = userAccount.getPassword();
@@ -181,10 +183,10 @@ public void refreshTable(){
             return;
         }
         UserAccount u = (UserAccount) jTable1.getValueAt(row, 0);
-        for(Customer customer:customerDirectory.getCustomerDirectory()){
-            if(customer.getName().equals(u.getUsername())){
-                ModifyCustomerJPanel mc = new ModifyCustomerJPanel(userProcessContainer,u,customer,ecosystem);
-                userProcessContainer.add("ModifyCustomerJPanel", mc);
+        for(Volunteer volunteer:volunteerDirectory.getVolunteerDirectory()){
+            if(volunteer.getName().equals(u.getUsername())){
+                ModifyVolunteerJPanel mv = new ModifyVolunteerJPanel(userProcessContainer,u,volunteer,ecosystem);
+                userProcessContainer.add("ModifyVolunteerJPanel", mv);
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
             }
@@ -195,15 +197,15 @@ public void refreshTable(){
         // TODO add your handling code here:
         int row = jTable1.getSelectedRow();
         if(row<0){
-            JOptionPane.showMessageDialog(null, "Please select a customer first!!", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please select a volunteer first!!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         UserAccount u = (UserAccount) jTable1.getValueAt(row, 0);
         userAccountDirectory.removeUserAccount(u);
-        for(Customer customer:customerDirectory.getCustomerDirectory()){
-            if(customer.getName().equals(u.getUsername())){
-                customerDirectory.removeCustomer(customer);
-                JOptionPane.showMessageDialog(null, "Customer deleted successfully!!", "Warning", JOptionPane.WARNING_MESSAGE);
+        for(Volunteer volunteer:volunteerDirectory.getVolunteerDirectory()){
+            if(volunteer.getName().equals(u.getUsername())){
+                volunteerDirectory.removeVolunteer(volunteer);
+                JOptionPane.showMessageDialog(null, "Volunteer deleted successfully!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         }
         refreshTable();
@@ -212,7 +214,7 @@ public void refreshTable(){
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         SystemAdminWorkAreaJPanel sa=new SystemAdminWorkAreaJPanel(userProcessContainer, ecosystem);
-        userProcessContainer.add("ModifyCustomerJPanel", sa);
+        userProcessContainer.add("ModifyVolunteerJPanel", sa);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_jButton4ActionPerformed

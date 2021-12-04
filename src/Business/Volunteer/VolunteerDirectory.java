@@ -7,10 +7,7 @@ package Business.Volunteer;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author harold
- */
+
 public class VolunteerDirectory {
    
       private ArrayList<Volunteer> volunteerDirectory;
