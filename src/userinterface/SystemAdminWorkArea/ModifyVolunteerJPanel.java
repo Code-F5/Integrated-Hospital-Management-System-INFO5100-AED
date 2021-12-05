@@ -105,7 +105,7 @@ public class ModifyVolunteerJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(376, 376, 376)
                         .addComponent(jButton1)))
-                .addGap(622, 622, 622))
+                .addContainerGap(335, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,7 +124,7 @@ public class ModifyVolunteerJPanel extends javax.swing.JPanel {
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addComponent(jButton1)
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
