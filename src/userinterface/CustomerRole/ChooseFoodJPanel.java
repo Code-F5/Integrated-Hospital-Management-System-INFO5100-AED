@@ -16,10 +16,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author yaopeixinmac
- */
+
 public class ChooseFoodJPanel extends javax.swing.JPanel {
 
     /**

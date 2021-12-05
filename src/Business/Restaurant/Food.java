@@ -5,10 +5,7 @@
  */
 package Business.Restaurant;
 
-/**
- *
- * @author yaopeixinmac
- */
+
 public class Food {
     private String name;
     private double price;

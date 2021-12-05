@@ -7,10 +7,7 @@ package Business.Restaurant;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author harold
- */
+
 public class RestaurantDirectory {
       private ArrayList<Restaurant> restaurantList;
 

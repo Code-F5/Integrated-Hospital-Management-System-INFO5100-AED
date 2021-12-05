@@ -16,10 +16,7 @@ import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author yaopeixinmac
- */
+
 public class CreateDeliveryManJPanel extends javax.swing.JPanel {
 
     /**

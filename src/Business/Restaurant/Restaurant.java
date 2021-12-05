@@ -7,10 +7,7 @@ package Business.Restaurant;
 
 import Business.WorkQueue.WorkQueue;
 
-/**
- *
- * @author harold
- */
+
 public class Restaurant {
     String name;
     Menu menu;

@@ -16,10 +16,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author yaopeixinmac
- */
+
 public class ManageMenuJPanel extends javax.swing.JPanel {
 
     /**

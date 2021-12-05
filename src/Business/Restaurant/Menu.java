@@ -7,10 +7,6 @@ package Business.Restaurant;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author yaopeixinmac
- */
 public class Menu {
         private ArrayList<Food> menu;
         

@@ -8,10 +8,6 @@ import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JPanel;
 
-/**
- *
- * @author raunak
- */
 
 
 public class ProcessWorkRequestJPanel extends javax.swing.JPanel {

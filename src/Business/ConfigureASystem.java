@@ -18,7 +18,7 @@ import Business.WorkQueue.WorkRequest;
 
 /**
  *
- * @author rrheg
+ * @author Dell
  */
 public class ConfigureASystem {
     
