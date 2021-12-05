@@ -8,7 +8,7 @@ package Business.Role;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import Business.Volunteer.Volunteer;
-import Business.VolunteerRole.VolunteerWorkAreaJPanel;
+import userinterface.VolunteerRole.VolunteerWorkAreaJPanel;
 import javax.swing.JPanel;
 
  
