@@ -9,7 +9,7 @@ import Business.WorkQueue.WorkQueue;
 
 /**
  *
- * @author harold
+ * @author Dell
  */
 public class DeliveryMan {
     private String name;
