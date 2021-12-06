@@ -5,23 +5,26 @@
  */
 package Business.Role;
 
-import Business.DeliveryMan.DeliveryMan;
 import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.Organization.FundraiserOrganization;
+import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import userinterface.DeliveryManRole.DeliveryManWorkAreaJPanel;
+import userinterface.DonorRole.DonorWorkAreaJPanel;
+
 
 
 public class DonorRole extends Role {
 
+     @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
+        return new DonorWorkAreaJPanel(userProcessContainer, account, (FundraiserOrganization)organization, enterprise);
+    }
+
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
-            for(DeliveryMan deliveryMan:business.getDeliveryManDirectory().getDeliveryManDirectory()){
-            if(deliveryMan.getName().equals(account.getUsername())){
-                return new DeliveryManWorkAreaJPanel(userProcessContainer,deliveryMan,business);
-            }
-        }
-       return null;//To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

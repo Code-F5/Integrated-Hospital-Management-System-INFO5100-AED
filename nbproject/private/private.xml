@@ -2,26 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Customer/CustomerDirectory.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/VolunteerRole/VolunteerWorkAreaJPanel.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Role/CounselorRole.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Volunteer/VolunteerDirectory.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/ConfigureASystem.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/userinterface/SystemAdminWorkArea/CreateCustomerJPanel.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/userinterface/SystemAdminWorkArea/ManageVolunteerJPanel.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/EcoSystem.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/userinterface/SystemAdminWorkArea/ManageCustomerJPanel.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Volunteer/Volunteer.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Role/DeliverManRole.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/DB4OUtil/DB4OUtil.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/userinterface/CustomerRole/CustomerAreaJPanel.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Role/VolunteerRole.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/userinterface/SystemAdminWorkArea/ModifyVolunteerJPanel.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Role/CustomerRole.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/userinterface/SystemAdminWorkArea/CreateVolunteerJPanel.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Customer/Customer.java</file>
-            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Role/CaretakerRole.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

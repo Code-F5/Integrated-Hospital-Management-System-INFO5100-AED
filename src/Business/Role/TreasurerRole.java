@@ -5,23 +5,20 @@
  */
 package Business.Role;
 
-import Business.DeliveryMan.DeliveryMan;
 import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
+import Business.Organization.TreasurerOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import userinterface.DeliveryManRole.DeliveryManWorkAreaJPanel;
+import userinterface.TreasurerRole.TreasurerWorkAreaJPanel;
 
 
 public class TreasurerRole extends Role {
 
-    @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
-            for(DeliveryMan deliveryMan:business.getDeliveryManDirectory().getDeliveryManDirectory()){
-            if(deliveryMan.getName().equals(account.getUsername())){
-                return new DeliveryManWorkAreaJPanel(userProcessContainer,deliveryMan,business);
-            }
-        }
-       return null;//To change body of generated methods, choose Tools | Templates.
+   @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
+        return new TreasurerWorkAreaJPanel(userProcessContainer, account, (TreasurerOrganization)organization, enterprise);
     }
     
 }

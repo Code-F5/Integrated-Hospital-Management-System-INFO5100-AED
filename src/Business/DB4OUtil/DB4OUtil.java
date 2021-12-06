@@ -1,4 +1,4 @@
- package Business.DB4OUtil;
+package Business.DB4OUtil;
 
 import Business.ConfigureASystem;
 import Business.EcoSystem;
@@ -9,7 +9,10 @@ import com.db4o.config.EmbeddedConfiguration;
 import com.db4o.ta.TransparentPersistenceSupport;
 import java.nio.file.Paths;
 
-
+/**
+ *
+ * @author Dell
+ */
 public class DB4OUtil {
 
     private static final String FILENAME = Paths.get("Databank.db4o").toAbsolutePath().toString();// path to the data store
@@ -32,6 +35,7 @@ public class DB4OUtil {
         try {
 
             EmbeddedConfiguration config = Db4oEmbedded.newConfiguration();
+            ObjectContainer db = Db4oEmbedded.openFile(config, FILENAME);
             config.common().add(new TransparentPersistenceSupport());
             //Controls the number of objects in memory
             config.common().activationDepth(Integer.MAX_VALUE);
@@ -41,7 +45,7 @@ public class DB4OUtil {
             //Register your top most Class here
             config.common().objectClass(EcoSystem.class).cascadeOnUpdate(true); // Change to the object you want to save
 
-            ObjectContainer db = Db4oEmbedded.openFile(config, FILENAME);
+            
             return db;
         } catch (Exception ex) {
             System.out.print(ex.getMessage());

@@ -6,6 +6,9 @@
 package userinterface.VolunteerRole;
 
 import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.Organization.NGOOrganization;
+import Business.UserAccount.UserAccount;
 import Business.Volunteer.Volunteer;
 import javax.swing.JPanel;
 
@@ -23,6 +26,10 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
     }
 
     public VolunteerWorkAreaJPanel(JPanel userProcessContainer, Volunteer volunteer, EcoSystem business) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public VolunteerWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, NGOOrganization ngoOrganization, Enterprise enterprise) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
