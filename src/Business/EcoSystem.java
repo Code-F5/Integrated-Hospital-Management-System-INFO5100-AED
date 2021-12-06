@@ -38,7 +38,7 @@ public class EcoSystem extends Organization{
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roleList=new ArrayList<Role>();
         roleList.add(new SystemAdminRole() {
-            @Override
+            
             public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
                 throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }

@@ -22,10 +22,8 @@ public class DonorRole extends Role {
         return new DonorWorkAreaJPanel(userProcessContainer, account, (FundraiserOrganization)organization, enterprise);
     }
 
-    @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
+   
     
 }
 

@@ -2,6 +2,8 @@ package userinterface;
 
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
+import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
 import Business.Role.CounselorRole;
 import Business.Role.DonorRole;
 import Business.Role.InstructorRole;
@@ -14,8 +16,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class MainJFrame extends javax.swing.JFrame {
-    private final EcoSystem system;
-    private final DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+    private EcoSystem system;
+    private Organization organization;
+    private Enterprise enterprise;
+    
+    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     
     public MainJFrame() {
         initComponents();
@@ -125,7 +130,7 @@ public class MainJFrame extends javax.swing.JFrame {
             String password = String.valueOf(passwordCharArray);
         UserAccount ua = system.getUserAccountDirectory().authenticateUser(userNameJTextField.getText(), password);
         CardLayout layout = (CardLayout) container.getLayout();
-        container.add(ua.getRole().createWorkArea(container, ua, system));
+        container.add(ua.getRole().createWorkArea(container, ua, organization, enterprise, system));
         layout.next(container);
         logoutJButton.setEnabled(true);
         }

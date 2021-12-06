@@ -13,10 +13,12 @@ import userinterface.AdminRole.AdminWorkAreaJPanel;
 import javax.swing.JPanel;
 
 
-public abstract class AdminRole extends Role{
+public class AdminRole extends Role{
 
    @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         return new AdminWorkAreaJPanel(userProcessContainer, enterprise);
     }
+
+   
 }

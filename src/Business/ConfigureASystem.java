@@ -26,7 +26,7 @@ public class ConfigureASystem {
         Employee employee = system.getEmployeeDirectory().createEmployee("sysadmin");
         
         UserAccount ua = system.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", employee, new SystemAdminRole() {
-            @Override
+            
             public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
                 throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
