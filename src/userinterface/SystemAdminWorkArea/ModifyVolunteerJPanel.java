@@ -5,7 +5,6 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.Customer.Customer;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import Business.Volunteer.Volunteer;

@@ -19,12 +19,21 @@ public abstract class Organization {
     private UserAccountDirectory userAccountDirectory;
     private int organizationID;
     private static int counter=0;
-    
+
+   
     public enum Type{
         RestaurantAdmin("RestaurantAdmin"),
         Customer("Customer"),
         DeliveryMan("Delivery"),
-        SysAdmin("Sysadmin");
+        SysAdmin("Sysadmin"),
+        Admin("Admin Organization"),
+        People("People Organization"),
+        Welfare("Welfare Organization"),
+        NGO("NGO Organization"),
+        Treasurer("Treasure Organization"), 
+        Volunteer("Volunteer Organization"),
+        Security("Security Organization"),
+        SocialWorker("Social Worker Organization");
         
         private String value;
         private Type(String value) {
