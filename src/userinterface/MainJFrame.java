@@ -32,7 +32,7 @@ public class MainJFrame extends javax.swing.JFrame {
         system.getUserAccountDirectory().createUserAccount("volunteer", "volunteer", null, new VolunteerRole());
         system.getUserAccountDirectory().createUserAccount("donor", "donor", null, new DonorRole());
         system.getUserAccountDirectory().createUserAccount("instructor", "instructor", null, new InstructorRole());
-        //system.getUserAccountDirectory().createUserAccount("police", "police", null, new PoliceDepartmentRole());
+        system.getUserAccountDirectory().createUserAccount("volunteer", "volunteer", null, new VolunteerRole());
         //system.getUserAccountDirectory().createUserAccount("doctor", "doctor", null, new DoctorAdministratorRole());
     }
 
