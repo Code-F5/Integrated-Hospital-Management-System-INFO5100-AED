@@ -17,18 +17,18 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="255" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="336" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="177" max="-2" attributes="0"/>
+              <EmptySpace pref="322" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="385" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="45" max="-2" attributes="0"/>
+              <EmptySpace pref="226" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

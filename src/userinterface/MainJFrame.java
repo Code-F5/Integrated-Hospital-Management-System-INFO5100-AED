@@ -6,6 +6,7 @@ import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Role.CounselorRole;
 import Business.Role.DonorRole;
+import Business.Role.HomelessPeopleRole;
 import Business.Role.InstructorRole;
 import Business.Role.SocialWorkerRole;
 import Business.Role.TreasurerRole;
@@ -33,7 +34,7 @@ public class MainJFrame extends javax.swing.JFrame {
         system.getUserAccountDirectory().createUserAccount("donor", "donor", null, new DonorRole());
         system.getUserAccountDirectory().createUserAccount("instructor", "instructor", null, new InstructorRole());
         system.getUserAccountDirectory().createUserAccount("volunteer", "volunteer", null, new VolunteerRole());
-        //system.getUserAccountDirectory().createUserAccount("doctor", "doctor", null, new DoctorAdministratorRole());
+        system.getUserAccountDirectory().createUserAccount("homelesspeople", "homelesspeople", null, new HomelessPeopleRole());
     }
 
     @SuppressWarnings("unchecked")

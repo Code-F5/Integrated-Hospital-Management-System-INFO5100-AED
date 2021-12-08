@@ -23,11 +23,9 @@ public class HomelessPeopleWorkAreaJPanel extends javax.swing.JPanel {
     private HomelessPeopleOrganization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
-    public HomelessPeopleWorkAreaJPanel() {
-        initComponents();
-    }
-
+   
     public HomelessPeopleWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, HomelessPeopleOrganization homelessPeopleOrganization, Enterprise enterprise) {
+        initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;
         this.enterprise = enterprise;
@@ -52,16 +50,16 @@ public class HomelessPeopleWorkAreaJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(255, 255, 255)
-                .addComponent(jLabel1)
-                .addContainerGap(336, Short.MAX_VALUE))
+                .addGap(225, 225, 225)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(322, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel1)
-                .addContainerGap(385, Short.MAX_VALUE))
+                .addGap(155, 155, 155)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(226, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

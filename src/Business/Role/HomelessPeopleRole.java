@@ -10,8 +10,6 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.HomelessPeopleOrganization;
 import Business.Organization.Organization;
-import static Business.Organization.Organization.Type.HomelessPeople;
-import static Business.Role.Role.RoleType.HomelessPeople;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import userinterface.HomelessPeopleRole.HomelessPeopleWorkAreaJPanel;
