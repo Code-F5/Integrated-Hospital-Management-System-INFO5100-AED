@@ -21,11 +21,5 @@ public class DonorRole extends Role {
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         return new DonorWorkAreaJPanel(userProcessContainer, account, (FundraiserOrganization)organization, enterprise);
     }
-
-   
-   
-    
+       
 }
-
-
-
