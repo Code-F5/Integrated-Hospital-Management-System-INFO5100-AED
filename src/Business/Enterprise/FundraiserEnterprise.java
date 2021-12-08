@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author shashwatshrey
+ * @author Dell
  */
 public class FundraiserEnterprise extends Enterprise {
      public FundraiserEnterprise(String name){

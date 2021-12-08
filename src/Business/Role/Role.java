@@ -5,8 +5,9 @@
 package Business.Role;
 
 import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
 
-import Business.Organization;
+import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 
@@ -14,10 +15,13 @@ import javax.swing.JPanel;
 public abstract class Role {
     
     public enum RoleType{
-        RestaurantAdmin("RestaurantAdmin"),
-        Customer("Customer"),
-        DeliveryMan("Delivery"),
-        SysAdmin("Sysadmin");
+        Admin("Admin"),      
+        Volunteer("Volunteer"),
+        Counselor("Counselor"),
+        Treasurer("Treasurer"),
+        Donor("Donor"),
+        SocialWorker("SocialWorker"),
+        Instructor("Instructor");
         
         private String value;
         private RoleType(String value){
@@ -34,9 +38,9 @@ public abstract class Role {
         }
     }
     
-    public abstract JPanel createWorkArea(JPanel userProcessContainer, 
-            UserAccount account,  
-            EcoSystem business);
+   public abstract JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business);
+
+   
 
     @Override
     public String toString() {
