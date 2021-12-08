@@ -30,7 +30,8 @@ public abstract class Organization {
         Instructor("Instructor Organization"),
         Rehabilitation("Rehabilitation Organization"),
         SocialWorker("SocialWorker Organization"),
-        Donor("Donor Organization");
+        Donor("Donor Organization"),
+        HomelessPeople("HomelessPeople Organization");
         
         private String value;
         private Type(String value) {

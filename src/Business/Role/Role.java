@@ -21,7 +21,8 @@ public abstract class Role {
         Treasurer("Treasurer"),
         Donor("Donor"),
         SocialWorker("SocialWorker"),
-        Instructor("Instructor");
+        Instructor("Instructor"),
+        HomelessPeople("HomelessPeople");
         
         private String value;
         private RoleType(String value){
