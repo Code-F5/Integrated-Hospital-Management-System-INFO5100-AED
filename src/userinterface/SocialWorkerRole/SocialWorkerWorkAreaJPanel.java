@@ -69,7 +69,7 @@ public class SocialWorkerWorkAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Donor's Name", "Amount Donated", "Donation Date", "Shelter Name"
+                "SocialWorker's Name", "Work", "Requested Date", "Shelter Name"
             }
         ) {
             boolean[] canEdit = new boolean [] {
