@@ -4,12 +4,14 @@
  */
 package Business.UserAccount;
 
-
 import Business.Employee.Employee;
 import Business.Role.Role;
 import java.util.ArrayList;
 
-
+/**
+ *
+ * @author Dell
+ */
 public class UserAccountDirectory {
     
     private ArrayList<UserAccount> userAccountList;
@@ -29,12 +31,18 @@ public class UserAccountDirectory {
             }
         return null;
     }
+    public UserAccount addUserAccount(UserAccount userAccount){
+        System.out.println("Business.UserAccount.UserAccountDirectory.addUserAccount()"+userAccount);
+        userAccountList.add(userAccount);
+        return userAccount;
+    }
     
-    public UserAccount createUserAccount(String username, String password, Role role){
+    
+    public UserAccount createUserAccount(String username, String password, Employee employee, Role role){
         UserAccount userAccount = new UserAccount();
         userAccount.setUsername(username);
         userAccount.setPassword(password);
- 
+        userAccount.setEmployee(employee);
         userAccount.setRole(role);
         userAccountList.add(userAccount);
         return userAccount;
@@ -46,8 +54,5 @@ public class UserAccountDirectory {
                 return false;
         }
         return true;
-    }
-        public void removeUserAccount(UserAccount u) {
-        userAccountList.remove(u);
     }
 }

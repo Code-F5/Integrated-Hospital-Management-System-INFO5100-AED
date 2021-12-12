@@ -5,12 +5,12 @@
  */
 package Business.Enterprise;
 
-import Business.Organization;
-import Business.OrganizationDirectory;
+import Business.Organization.Organization;
+import Business.Organization.OrganizationDirectory;
 
 /**
  *
- * @author MyPC1
+ * @author Dell
  */
 public abstract class Enterprise extends Organization{
     

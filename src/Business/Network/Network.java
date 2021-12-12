@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package Business.Network;
-
 import Business.Enterprise.EnterpriseDirectory;
 
 /**
  *
- * @author MyPC1
+ * @author Dell
  */
 public class Network {
     private String name;

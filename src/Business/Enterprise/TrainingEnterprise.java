@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author MyPC1
+ * @author Dell
  */
 public class TrainingEnterprise extends Enterprise {
     

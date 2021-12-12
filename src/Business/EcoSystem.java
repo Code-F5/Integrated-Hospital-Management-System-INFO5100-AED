@@ -5,63 +5,18 @@
  */
 package Business;
 
-
-import Business.Customer.CustomerDirectory;
-import Business.DeliveryMan.DeliveryManDirectory;
-import Business.Restaurant.RestaurantDirectory;
-import Business.Role.Role;
-import Business.Role.SystemAdminRole;
+import Business.Network.Network;
 import Business.Volunteer.VolunteerDirectory;
 import java.util.ArrayList;
 
-
-public class EcoSystem extends Organization{
+/**
+ *
+ * @author Dell
+ */
+public class EcoSystem extends Environment{
     
     private static EcoSystem business;
-    private RestaurantDirectory restaurantDirectory=new RestaurantDirectory();
-    private CustomerDirectory customerDirectory=new CustomerDirectory() ;
-    private DeliveryManDirectory deliveryManDirectory=new DeliveryManDirectory();
-    private VolunteerDirectory volunteerDirectory=new VolunteerDirectory();
-
-    public VolunteerDirectory getVolunteerDirectory() {
-        return volunteerDirectory;
-    }
-
-    public void setVolunteerDirectory(VolunteerDirectory volunteerDirectory) {
-        this.volunteerDirectory = volunteerDirectory;
-    }
-
-    public RestaurantDirectory getRestaurantDirectory() {
-        return restaurantDirectory;
-    }
-
-    public void setRestaurantDirectory(RestaurantDirectory restaurantDirectory) {
-        this.restaurantDirectory = restaurantDirectory;
-    }
-
-    public CustomerDirectory getCustomerDirectory() {
-        return customerDirectory;
-    }
-
-    public void setCustomerDirectory(CustomerDirectory customerDirectory) {
-        this.customerDirectory = customerDirectory;
-    }
-
-    public DeliveryManDirectory getDeliveryManDirectory() {
-        return deliveryManDirectory;
-    }
-
-    public void setDeliveryManDirectory(DeliveryManDirectory deliveryManDirectory) {
-        this.deliveryManDirectory = deliveryManDirectory;
-    }
-
-    public EcoSystem(RestaurantDirectory restaurantDirectory, CustomerDirectory customerDirectory, DeliveryManDirectory deliveryManDirectory) {
-
-        this.restaurantDirectory = restaurantDirectory;
-        this.customerDirectory = customerDirectory;
-        this.deliveryManDirectory = deliveryManDirectory;
-    }
-    
+    private ArrayList<Network> networkList;
     public static EcoSystem getInstance(){
         if(business==null){
             business=new EcoSystem();
@@ -69,20 +24,34 @@ public class EcoSystem extends Organization{
         return business;
     }
     
-    @Override
-    public ArrayList<Role> getSupportedRole() {
-        ArrayList<Role> roleList=new ArrayList<Role>();
-        roleList.add(new SystemAdminRole());
-        return roleList;
+    public Network createAndAddNetwork(){
+        Network network=new Network();
+        networkList.add(network);
+        return network;
     }
-    private EcoSystem(){
-        super(null);
-       // networkList=new ArrayList<Network>();
+    
+    
+
+    public ArrayList<Network> getNetworkList() {
+        return networkList;
     }
 
+    public void setNetworkList(ArrayList<Network> networkList) {
+        this.networkList = networkList;
+    }
     
     public boolean checkIfUserIsUnique(String userName){
-       //
-       return false;
+        if(!this.getUserAccountDirectory().checkIfUsernameIsUnique(userName)){
+            return false;
+        }
+        for(Network network:networkList){
+            
+        }
+        return true;
     }
+
+    public VolunteerDirectory getVolunteerDirectory() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

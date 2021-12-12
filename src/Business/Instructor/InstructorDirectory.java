@@ -22,10 +22,10 @@ public class InstructorDirectory {
     public void setInstructorDirectory(ArrayList<Instructor> instructorDirectory) {
         this.instructorDirectory = instructorDirectory;
     }
-    public Instructor addInstructor(){
-         Instructor v = new Instructor();
-        instructorDirectory.add(v);
-        return v;
+    public ArrayList<Instructor> addInstructor(Instructor instructor){
+        
+        instructorDirectory.add(instructor);
+        return instructorDirectory;
     }
     public void removeInstructor(Instructor i) {
         instructorDirectory.remove(i);

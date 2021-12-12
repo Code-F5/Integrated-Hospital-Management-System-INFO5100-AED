@@ -6,12 +6,11 @@
 package Business.Enterprise;
 
 
-import Business.OrganizationDirectory;
 import java.util.ArrayList;
 
 /**
  *
- * @author MyPC1
+ * @author Dell
  */
 public class EnterpriseDirectory {
     private ArrayList<Enterprise> enterpriseList;

@@ -4,25 +4,21 @@
  */
 package Business.Role;
 
-import Business.Customer.Customer;
-import Business.EcoSystem;
 
-import Business.Organization;
+import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
+import Business.Organization.RehabilitationOrganization;
 import Business.UserAccount.UserAccount;
-import userinterface.CustomerRole.CustomerAreaJPanel;
 import javax.swing.JPanel;
+import userinterface.CounselorRole.CounselorWorkAreaJPanel;
 
 
 public class CounselorRole extends Role{
 
     
-    @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
-          for(Customer customer:business.getCustomerDirectory().getCustomerDirectory()){
-            if(customer.getName().equals(account.getUsername())){
-                return new CustomerAreaJPanel(userProcessContainer,customer,business);
-            }
-        }
-       return null;
+   @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
+        return new CounselorWorkAreaJPanel(userProcessContainer, account, (RehabilitationOrganization)organization, enterprise);
     }
 }

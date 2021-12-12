@@ -10,25 +10,25 @@ import java.util.ArrayList;
 
 public class DonorDirectory {
    
-      private ArrayList<Donor> donorDirectory;
+      private ArrayList<Donor> donorList;
       public DonorDirectory(){
-          donorDirectory=new ArrayList<Donor>();
+          donorList=new ArrayList<Donor>();
       }
 
-    public ArrayList<Donor> getDonorDirectory() {
-        return donorDirectory;
+    public ArrayList<Donor> getDonorList() {
+        return donorList;
     }
 
-    public void setDonorDirectory(ArrayList<Donor> donorDirectory) {
-        this.donorDirectory = donorDirectory;
+    public void setDonorList(ArrayList<Donor> donorDirectory) {
+        this.donorList = donorDirectory;
     }
-    public Donor addDonor(){
-         Donor v = new Donor();
-        donorDirectory.add(v);
-        return v;
+    public ArrayList<Donor> addDonor(Donor donor){
+         
+        donorList.add(donor);
+        return donorList;
     }
     public void removeDonor(Donor d) {
-        donorDirectory.remove(d);
+        donorList.remove(d);
     }
        
 }
