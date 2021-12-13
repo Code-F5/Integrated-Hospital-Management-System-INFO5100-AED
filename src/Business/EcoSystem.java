@@ -6,52 +6,58 @@
 package Business;
 
 import Business.Network.Network;
-import Business.Volunteer.VolunteerDirectory;
+import Business.Organization.Organization;
+import Business.Role.Role;
+import Business.Role.SystemAdminRole;
 import java.util.ArrayList;
 
-/**
- *
- * @author Dell
- */
-public class EcoSystem extends Environment{
+// Extending Organization from ECosystem
+public class EcoSystem extends Organization{
     
-    private static EcoSystem business;
-    private ArrayList<Network> networkList;
+    private static EcoSystem ecosystem;
+    private ArrayList<Network> networks;
     public static EcoSystem getInstance(){
-        if(business==null){
-            business=new EcoSystem();
+        if(ecosystem==null){
+            ecosystem=new EcoSystem();
         }
-        return business;
+        return ecosystem;
     }
     
     public Network createAndAddNetwork(){
         Network network=new Network();
-        networkList.add(network);
+        networks.add(network);
         return network;
     }
-    
-    
-
-    public ArrayList<Network> getNetworkList() {
-        return networkList;
+    //Overriding Support role
+    //Created ArrayList of Role
+    @Override
+    public ArrayList<Role> getSupportedRole() {
+        ArrayList<Role> roleList=new ArrayList<Role>();
+        roleList.add(new SystemAdminRole());
+        return roleList;
     }
-
-    public void setNetworkList(ArrayList<Network> networkList) {
-        this.networkList = networkList;
+    private EcoSystem(){
+        super(null);
+        networks=new ArrayList<Network>();
+    }
+    //ArrayList of <Network> calling function getNetwork() 
+    public ArrayList<Network> getNetworks() {
+        return networks;
+    }
+    //ArrayList of <Network> calling function setNetwork()
+    public void setNetworks(ArrayList<Network> networks) {
+        this.networks = networks;
     }
     
-    public boolean checkIfUserIsUnique(String userName){
-        if(!this.getUserAccountDirectory().checkIfUsernameIsUnique(userName)){
+    //Defining boolean function for Unique User
+    public boolean IsUserUnique(String userName){
+        if(!this.getUserAccountDirectory().isUserUnique(userName)){
             return false;
         }
-        for(Network network:networkList){
+        for(Network network:networks){
             
         }
         return true;
     }
-
-    public VolunteerDirectory getVolunteerDirectory() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }
+// Completed code for EcoSystem

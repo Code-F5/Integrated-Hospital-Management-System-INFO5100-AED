@@ -8,10 +8,7 @@ import Business.Employee.Employee;
 import Business.Role.Role;
 import Business.WorkQueue.WorkQueue;
 
-/**
- *
- * @author Dell
- */
+
 public class UserAccount {
     
     private String username;
@@ -20,10 +17,12 @@ public class UserAccount {
     private Role role;
     private WorkQueue workQueue;
 
- 
-
+    public UserAccount() {
+        workQueue = new WorkQueue();
+    }
     
-   
+    
+    
     public String getUsername() {
         return username;
     }
@@ -44,12 +43,12 @@ public class UserAccount {
         return role;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
-    }
-    
     public void setEmployee(Employee employee) {
         this.employee = employee;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public Employee getEmployee() {
@@ -59,6 +58,8 @@ public class UserAccount {
     public WorkQueue getWorkQueue() {
         return workQueue;
     }
+
+    
     
     @Override
     public String toString() {

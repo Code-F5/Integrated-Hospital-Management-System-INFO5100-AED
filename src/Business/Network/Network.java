@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Business.Network;
+
 import Business.Enterprise.EnterpriseDirectory;
 
 /**
