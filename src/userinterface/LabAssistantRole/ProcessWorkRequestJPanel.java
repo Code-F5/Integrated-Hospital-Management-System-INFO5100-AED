@@ -38,95 +38,99 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        submitJButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        resultJTextField = new javax.swing.JTextField();
-        backJButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        btnSubmitResult = new javax.swing.JButton();
+        lblResult = new javax.swing.JLabel();
+        txtResult = new javax.swing.JTextField();
+        btnBack = new javax.swing.JButton();
+        lblLabResultTitle = new javax.swing.JLabel();
+        lblLabResults = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        submitJButton.setBackground(new java.awt.Color(0, 153, 255));
-        submitJButton.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        submitJButton.setText("Submit Result");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnSubmitResult.setBackground(new java.awt.Color(0, 153, 255));
+        btnSubmitResult.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSubmitResult.setText("Submit");
+        btnSubmitResult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                btnSubmitResultActionPerformed(evt);
             }
         });
-        add(submitJButton);
-        submitJButton.setBounds(240, 180, 140, 36);
+        add(btnSubmitResult);
+        btnSubmitResult.setBounds(120, 200, 140, 36);
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel1.setText("Result :");
-        add(jLabel1);
-        jLabel1.setBounds(162, 135, 70, 17);
-        add(resultJTextField);
-        resultJTextField.setBounds(250, 130, 160, 30);
+        lblResult.setBackground(new java.awt.Color(255, 255, 255));
+        lblResult.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblResult.setText("Result :");
+        add(lblResult);
+        lblResult.setBounds(80, 140, 70, 17);
+        add(txtResult);
+        txtResult.setBounds(150, 130, 160, 30);
 
-        backJButton.setBackground(new java.awt.Color(0, 153, 255));
-        backJButton.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        backJButton.setText("<< Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setBackground(new java.awt.Color(0, 153, 255));
+        btnBack.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnBack.setText("<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(10, 11, 81, 25);
+        add(btnBack);
+        btnBack.setBounds(10, 11, 81, 25);
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel2.setText("LAB RESULTS");
-        add(jLabel2);
-        jLabel2.setBounds(270, 30, 130, 29);
+        lblLabResultTitle.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblLabResultTitle.setForeground(new java.awt.Color(153, 0, 0));
+        lblLabResultTitle.setText("LAB RESULTS");
+        add(lblLabResultTitle);
+        lblLabResultTitle.setBounds(270, 30, 130, 29);
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab2.gif"))); // NOI18N
-        add(jLabel3);
-        jLabel3.setBounds(-10, 0, 740, 450);
+        lblLabResults.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblLabResults.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab3.jpg"))); // NOI18N
+        add(lblLabResults);
+        lblLabResults.setBounds(0, 0, 670, 460);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        LabAssistantWorkAreaJPanel dwjp = (LabAssistantWorkAreaJPanel) component;
-        dwjp.populateTable();
+        LabAssistantWorkAreaJPanel labassistant = (LabAssistantWorkAreaJPanel) component;
+        labassistant.populateTable();
+        
+        
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-        String labResult = resultJTextField.getText().trim();
+    private void btnSubmitResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitResultActionPerformed
+        String labResult ;
+        labResult = txtResult.getText().trim();
         if (labResult.equals("")) {
-            JOptionPane.showMessageDialog(null, "Result is mandatory");
+            JOptionPane.showMessageDialog(null, "Please enter a valid data !");
             return;
         } else {
-            int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
+            int dialogResult ;
+            dialogResult = JOptionPane.showConfirmDialog(null, "Would you like to proceed?");
             if (dialogResult == JOptionPane.YES_OPTION) {
                 patientTreatmentWorkRequest.setLabResult(labResult);
-                patientTreatmentWorkRequest.setStatus("Lab Test Completed");
+                patientTreatmentWorkRequest.setStatus("Lab test is Completed");
                 JOptionPane.showMessageDialog(null, "Result submitted successfully");
-                resultJTextField.setText("");
-                submitJButton.setEnabled(false);
+                txtResult.setText("");
+                btnSubmitResult.setEnabled(false);
             }
 
         }
 
 
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_btnSubmitResultActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField resultJTextField;
-    private javax.swing.JButton submitJButton;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnSubmitResult;
+    private javax.swing.JLabel lblLabResultTitle;
+    private javax.swing.JLabel lblLabResults;
+    private javax.swing.JLabel lblResult;
+    private javax.swing.JTextField txtResult;
     // End of variables declaration//GEN-END:variables
 }

@@ -44,48 +44,48 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
+        lblPolicyNumber = new javax.swing.JLabel();
         txtPolicyNumber = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        lblClaimAmount = new javax.swing.JLabel();
         txtClaimAmount = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        lblMassage = new javax.swing.JLabel();
         txtMessage = new javax.swing.JTextField();
         btnAccept = new javax.swing.JButton();
         btnReject = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        lblCustomerName = new javax.swing.JLabel();
         txtCustomerName = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        lblTotalBill = new javax.swing.JLabel();
         txtBillAmount = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel2.setText("Policy Number :");
-        add(jLabel2);
-        jLabel2.setBounds(169, 98, 120, 17);
+        lblPolicyNumber.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblPolicyNumber.setText("Policy Number :");
+        add(lblPolicyNumber);
+        lblPolicyNumber.setBounds(169, 98, 120, 17);
 
         txtPolicyNumber.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txtPolicyNumber.setEnabled(false);
         add(txtPolicyNumber);
         txtPolicyNumber.setBounds(307, 96, 145, 20);
 
-        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel3.setText("Claim Amount :");
-        add(jLabel3);
-        jLabel3.setBounds(170, 210, 98, 17);
+        lblClaimAmount.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblClaimAmount.setText("Claim Amount :");
+        add(lblClaimAmount);
+        lblClaimAmount.setBounds(170, 210, 98, 17);
 
         txtClaimAmount.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txtClaimAmount.setEnabled(false);
         add(txtClaimAmount);
         txtClaimAmount.setBounds(308, 210, 144, 20);
 
-        jLabel4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel4.setText("Message :");
-        add(jLabel4);
-        jLabel4.setBounds(200, 250, 70, 17);
+        lblMassage.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblMassage.setText("Message :");
+        add(lblMassage);
+        lblMassage.setBounds(200, 250, 70, 17);
 
         txtMessage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,40 +97,40 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
 
         btnAccept.setBackground(new java.awt.Color(0, 153, 255));
         btnAccept.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnAccept.setText("Accept and Send Request To Finance Department");
+        btnAccept.setText("Route To Finance Department");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAcceptActionPerformed(evt);
             }
         });
         add(btnAccept);
-        btnAccept.setBounds(70, 290, 360, 34);
+        btnAccept.setBounds(240, 300, 250, 34);
 
         btnReject.setBackground(new java.awt.Color(0, 153, 255));
         btnReject.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnReject.setText("Reject Request");
+        btnReject.setText("Reject");
         btnReject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRejectActionPerformed(evt);
             }
         });
         add(btnReject);
-        btnReject.setBounds(470, 290, 160, 34);
+        btnReject.setBounds(240, 360, 250, 34);
 
-        jLabel5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel5.setText("Customer Name :");
-        add(jLabel5);
-        jLabel5.setBounds(163, 136, 120, 17);
+        lblCustomerName.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblCustomerName.setText("Customer Name :");
+        add(lblCustomerName);
+        lblCustomerName.setBounds(163, 136, 120, 17);
 
         txtCustomerName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txtCustomerName.setEnabled(false);
         add(txtCustomerName);
         txtCustomerName.setBounds(306, 134, 146, 20);
 
-        jLabel6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel6.setText("Total Bill Amount :");
-        add(jLabel6);
-        jLabel6.setBounds(130, 170, 140, 17);
+        lblTotalBill.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblTotalBill.setText("Total Bill Amount :");
+        add(lblTotalBill);
+        lblTotalBill.setBounds(130, 170, 140, 17);
 
         txtBillAmount.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txtBillAmount.setEnabled(false);
@@ -148,9 +148,11 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(10, 11, 81, 25);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/insurance claim.gif"))); // NOI18N
-        add(jLabel7);
-        jLabel7.setBounds(-30, -50, 800, 600);
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel1.setText("FINANCE DEPARTMENT APPROVAL PANEL");
+        add(jLabel1);
+        jLabel1.setBounds(210, 20, 380, 25);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMessageActionPerformed
@@ -159,13 +161,14 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
 
-        String message = txtMessage.getText();
-        if (message.equals("")) {
-            JOptionPane.showMessageDialog(null, "Message is mandatory!");
+        String msg ;
+        msg = txtMessage.getText();
+        if (msg.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Message is must to be entered!");
             return;
         } else {
-            insuranceWorkRequest.setMessage(message);
-            int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
+            insuranceWorkRequest.setMessage(msg);
+            int dialogResult = JOptionPane.showConfirmDialog(null, "Would you like to proceed?");
 
             if (dialogResult == JOptionPane.YES_OPTION) {
                 Organization org = null;
@@ -181,7 +184,7 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
                     account.getWorkQueue().getWorkRequests().add(insuranceWorkRequest);
                 }
 
-                JOptionPane.showMessageDialog(null, "Request Approved and Sent To Finance Department");
+                JOptionPane.showMessageDialog(null, "Request is approved routed To Finance Department");
                 insuranceWorkRequest.setStatus("Sent To Finance Department");
                 insuranceWorkRequest.setAgent(account.getEmployee().getEmployeename());
                 insuranceWorkRequest.setReceiver(null);
@@ -211,12 +214,12 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
 
         String message = txtMessage.getText();
         if (message.equals("")) {
-            JOptionPane.showMessageDialog(null, "Message is mandatory!");
+            JOptionPane.showMessageDialog(null, "Message is must to be entered!");
             return;
         } else {
             insuranceWorkRequest.setMessage(message);
 
-            int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
+            int dialogResult = JOptionPane.showConfirmDialog(null, "Would you like to proceed?");
             if (dialogResult == JOptionPane.YES_OPTION) {
 
                 insuranceWorkRequest.setStatus("Rejected");
@@ -235,12 +238,12 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnAccept;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnReject;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblClaimAmount;
+    private javax.swing.JLabel lblCustomerName;
+    private javax.swing.JLabel lblMassage;
+    private javax.swing.JLabel lblPolicyNumber;
+    private javax.swing.JLabel lblTotalBill;
     private javax.swing.JTextField txtBillAmount;
     private javax.swing.JTextField txtClaimAmount;
     private javax.swing.JTextField txtCustomerName;

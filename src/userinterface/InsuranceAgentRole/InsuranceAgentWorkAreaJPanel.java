@@ -45,59 +45,53 @@ public class InsuranceAgentWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAddNewUser = new javax.swing.JButton();
-        btnProcessInsuranceRequests = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        btnAddNewMember = new javax.swing.JButton();
+        btnProcessRequests = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        btnAddNewUser.setBackground(new java.awt.Color(0, 153, 255));
-        btnAddNewUser.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnAddNewUser.setText("Create New Member");
-        btnAddNewUser.addActionListener(new java.awt.event.ActionListener() {
+        btnAddNewMember.setBackground(new java.awt.Color(0, 153, 255));
+        btnAddNewMember.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnAddNewMember.setText("Create New Member");
+        btnAddNewMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddNewUserActionPerformed(evt);
+                btnAddNewMemberActionPerformed(evt);
             }
         });
-        add(btnAddNewUser);
-        btnAddNewUser.setBounds(20, 30, 184, 41);
+        add(btnAddNewMember);
+        btnAddNewMember.setBounds(120, 160, 184, 41);
 
-        btnProcessInsuranceRequests.setBackground(new java.awt.Color(0, 153, 255));
-        btnProcessInsuranceRequests.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnProcessInsuranceRequests.setText("Process Insurance Requests");
-        btnProcessInsuranceRequests.addActionListener(new java.awt.event.ActionListener() {
+        btnProcessRequests.setBackground(new java.awt.Color(0, 153, 255));
+        btnProcessRequests.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnProcessRequests.setText("Process Insurance Requests");
+        btnProcessRequests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProcessInsuranceRequestsActionPerformed(evt);
+                btnProcessRequestsActionPerformed(evt);
             }
         });
-        add(btnProcessInsuranceRequests);
-        btnProcessInsuranceRequests.setBounds(460, 370, 220, 39);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/health insurance.gif"))); // NOI18N
-        add(jLabel2);
-        jLabel2.setBounds(1, 5, 690, 430);
+        add(btnProcessRequests);
+        btnProcessRequests.setBounds(390, 160, 220, 39);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNewUserActionPerformed
+    private void btnAddNewMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNewMemberActionPerformed
         String policyNumber = UUID.randomUUID().toString().substring(0, 7);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("AddNewPolicyHolderJPanel", new AddNewPolicyHolderJPanel(userProcessContainer, userAccount, enterprise, policyNumber));
         layout.next(userProcessContainer);
 
-    }//GEN-LAST:event_btnAddNewUserActionPerformed
+    }//GEN-LAST:event_btnAddNewMemberActionPerformed
 
-    private void btnProcessInsuranceRequestsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessInsuranceRequestsActionPerformed
+    private void btnProcessRequestsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessRequestsActionPerformed
         // TODO add your handling code here:
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("ProcessInsuranceRequestsJPanel", new AllInsuranceRequestsJPanel(userProcessContainer, userAccount, enterprise, insuranceAgentOrganization));
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnProcessInsuranceRequestsActionPerformed
+    }//GEN-LAST:event_btnProcessRequestsActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddNewUser;
-    private javax.swing.JButton btnProcessInsuranceRequests;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnAddNewMember;
+    private javax.swing.JButton btnProcessRequests;
     // End of variables declaration//GEN-END:variables
 }

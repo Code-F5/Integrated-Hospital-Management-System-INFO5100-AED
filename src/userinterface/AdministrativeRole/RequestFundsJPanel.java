@@ -74,11 +74,11 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblRequestFunds = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblLocation = new javax.swing.JLabel();
         txtLocation = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        lblPopulation = new javax.swing.JLabel();
         txtPopulation = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        lblAmount = new javax.swing.JLabel();
         txtAmount = new javax.swing.JTextField();
         btnRequestFunds = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -98,10 +98,10 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         add(lblRequestFunds);
         lblRequestFunds.setBounds(236, 11, 290, 50);
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel1.setText("Location:");
-        add(jLabel1);
-        jLabel1.setBounds(67, 69, 63, 17);
+        lblLocation.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblLocation.setText("Location:");
+        add(lblLocation);
+        lblLocation.setBounds(67, 69, 63, 17);
 
         txtLocation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,10 +111,10 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         add(txtLocation);
         txtLocation.setBounds(165, 67, 140, 23);
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel2.setText("Population:");
-        add(jLabel2);
-        jLabel2.setBounds(50, 110, 77, 17);
+        lblPopulation.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblPopulation.setText("Population:");
+        add(lblPopulation);
+        lblPopulation.setBounds(50, 110, 77, 17);
 
         txtPopulation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,10 +129,10 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
         add(txtPopulation);
         txtPopulation.setBounds(165, 105, 143, 23);
 
-        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel3.setText("Amount:");
-        add(jLabel3);
-        jLabel3.setBounds(70, 150, 49, 17);
+        lblAmount.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblAmount.setText("Amount:");
+        add(lblAmount);
+        lblAmount.setBounds(70, 150, 49, 17);
 
         txtAmount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -301,13 +301,13 @@ public class RequestFundsJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnRequestFunds;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblAmount;
+    private javax.swing.JLabel lblLocation;
+    private javax.swing.JLabel lblPopulation;
     private javax.swing.JLabel lblRequestFunds;
     private javax.swing.JTable tblFundRequest;
     private javax.swing.JTextField txtAmount;

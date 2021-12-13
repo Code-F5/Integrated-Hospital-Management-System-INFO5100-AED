@@ -28,24 +28,24 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lblAmount" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblPopulation" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblMessage" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblLocation" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="53" pref="53" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtMessage" min="-2" pref="116" max="-2" attributes="0"/>
-                                  <Component id="txtPopulation" min="-2" pref="116" max="-2" attributes="0"/>
-                                  <Component id="txtLocation" min="-2" pref="116" max="-2" attributes="0"/>
-                                  <Component id="txtAmount" min="-2" pref="116" max="-2" attributes="0"/>
+                                  <Component id="btnMessage" min="-2" pref="116" max="-2" attributes="0"/>
+                                  <Component id="btnPopulation" min="-2" pref="116" max="-2" attributes="0"/>
+                                  <Component id="btnLocation" min="-2" pref="116" max="-2" attributes="0"/>
+                                  <Component id="btnAmount" min="-2" pref="116" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="btnBack" min="-2" pref="99" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
-                              <Component id="lblTreasurerWorkArea" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+                              <Component id="lblTreasurerTitle" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -58,7 +58,7 @@
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <Component id="lblPhoto" min="-2" pref="237" max="-2" attributes="0"/>
+              <Component id="lblTreasurer" min="-2" pref="237" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -67,32 +67,32 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="btnBack" min="-2" pref="29" max="-2" attributes="0"/>
-                  <Component id="lblTreasurerWorkArea" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnBack" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="lblTreasurerTitle" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="txtLocation" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblLocation" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnLocation" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblAmount" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtAmount" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAmount" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtPopulation" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblPopulation" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPopulation" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtMessage" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblMessage" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMessage" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -102,7 +102,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Component id="lblPhoto" min="-2" pref="221" max="-2" attributes="0"/>
+                      <Component id="lblTreasurer" min="-2" pref="221" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="132" max="32767" attributes="0"/>
@@ -153,7 +153,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRejectActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblMessage">
+    <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Monospaced" size="12" style="1"/>
@@ -161,9 +161,9 @@
         <Property name="text" type="java.lang.String" value="Message :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtMessage">
+    <Component class="javax.swing.JTextField" name="btnMessage">
     </Component>
-    <Component class="javax.swing.JLabel" name="lblLocation">
+    <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Monospaced" size="12" style="1"/>
@@ -171,17 +171,17 @@
         <Property name="text" type="java.lang.String" value="Location :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtLocation">
+    <Component class="javax.swing.JTextField" name="btnLocation">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPopulation">
+    <Component class="javax.swing.JTextField" name="btnPopulation">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblPopulation">
+    <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Monospaced" size="12" style="1"/>
@@ -189,12 +189,12 @@
         <Property name="text" type="java.lang.String" value="Population :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtAmount">
+    <Component class="javax.swing.JTextField" name="btnAmount">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblAmount">
+    <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Monospaced" size="12" style="1"/>
@@ -202,7 +202,7 @@
         <Property name="text" type="java.lang.String" value="Amount :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblTreasurerWorkArea">
+    <Component class="javax.swing.JLabel" name="lblTreasurerTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Monospaced" size="18" style="1"/>
@@ -213,10 +213,10 @@
         <Property name="text" type="java.lang.String" value="Treasurer Work-Area"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblPhoto">
+    <Component class="javax.swing.JLabel" name="lblTreasurer">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Images/treasure.gif"/>
+          <Image iconType="3" name="/Images/treasurer.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel6"/>
       </Properties>

@@ -78,11 +78,11 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         tblOrganization = new javax.swing.JTable();
         btnAddOrganization = new javax.swing.JButton();
         cbOrgnanization = new javax.swing.JComboBox();
-        jLabel1 = new javax.swing.JLabel();
+        lblOrganizationType = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         lblHeaderManageOrg = new javax.swing.JLabel();
         btnDeleteOrganization = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        lblManageOrgImg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -130,8 +130,8 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
         cbOrgnanization.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel1.setText("Organization Type :");
+        lblOrganizationType.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblOrganizationType.setText("Organization Type :");
 
         btnBack.setBackground(new java.awt.Color(102, 153, 255));
         btnBack.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -155,8 +155,8 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/mainframe.jpg"))); // NOI18N
+        lblManageOrgImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblManageOrgImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/mainframe.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -171,11 +171,11 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
                         .addComponent(lblHeaderManageOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(55, 55, 55)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblManageOrgImg, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                             .addGap(129, 129, 129)
-                            .addComponent(jLabel1)
+                            .addComponent(lblOrganizationType)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(18, 18, 18)
@@ -204,11 +204,11 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbOrgnanization, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDeleteOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(lblOrganizationType))
                 .addGap(18, 18, 18)
                 .addComponent(btnAddOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(9, 9, 9)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblManageOrgImg, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(142, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -224,7 +224,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         }
 
         if (orgName.contains(type.getValue())) {
-            JOptionPane.showMessageDialog(null, "Organization already exists!! ");
+            JOptionPane.showMessageDialog(null, "Organization is not unique!! ");
             return;
         } else {
             directory.createOrganization(type);
@@ -261,10 +261,10 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDeleteOrganization;
     private javax.swing.JComboBox cbOrgnanization;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblHeaderManageOrg;
+    private javax.swing.JLabel lblManageOrgImg;
+    private javax.swing.JLabel lblOrganizationType;
     private javax.swing.JTable tblOrganization;
     // End of variables declaration//GEN-END:variables
 }

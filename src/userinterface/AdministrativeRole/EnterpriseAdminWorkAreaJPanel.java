@@ -43,20 +43,20 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblAdminTitle = new javax.swing.JLabel();
         btnManageUser = new javax.swing.JButton();
         btnManageEmployee = new javax.swing.JButton();
         btnManageOrganization = new javax.swing.JButton();
-        enterpriseLabel = new javax.swing.JLabel();
+        lblEnterprise = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
         btnRequestFunds = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        lblAdmin = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel1.setText("PERSONAL WORK-AREA ADMINISTRATIVE ROLE");
+        lblAdminTitle.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblAdminTitle.setForeground(new java.awt.Color(153, 0, 51));
+        lblAdminTitle.setText("PERSONAL WORK-AREA ADMINISTRATIVE ROLE");
 
         btnManageUser.setBackground(new java.awt.Color(102, 153, 255));
         btnManageUser.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -85,8 +85,8 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        enterpriseLabel.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
-        enterpriseLabel.setText("ENTERPRISE :");
+        lblEnterprise.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
+        lblEnterprise.setText("ENTERPRISE :");
 
         valueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
@@ -99,8 +99,8 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin.png"))); // NOI18N
-        jLabel2.setPreferredSize(new java.awt.Dimension(556, 600));
+        lblAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin.png"))); // NOI18N
+        lblAdmin.setPreferredSize(new java.awt.Dimension(556, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -110,7 +110,7 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -124,11 +124,11 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
                             .addComponent(btnRequestFunds)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(99, 99, 99)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 817, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 817, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(170, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(lblAdminTitle)
                 .addGap(330, 330, 330))
         );
 
@@ -138,10 +138,10 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(jLabel1)
+                .addComponent(lblAdminTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
@@ -152,7 +152,7 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
                     .addComponent(btnManageEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRequestFunds, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
         );
 
@@ -200,9 +200,9 @@ public class EnterpriseAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageOrganization;
     private javax.swing.JButton btnManageUser;
     private javax.swing.JButton btnRequestFunds;
-    private javax.swing.JLabel enterpriseLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblAdmin;
+    private javax.swing.JLabel lblAdminTitle;
+    private javax.swing.JLabel lblEnterprise;
     private javax.swing.JLabel valueLabel;
     // End of variables declaration//GEN-END:variables
 

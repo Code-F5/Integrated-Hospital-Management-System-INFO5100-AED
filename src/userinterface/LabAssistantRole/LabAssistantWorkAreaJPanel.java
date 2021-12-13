@@ -42,7 +42,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
     }
 
     public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblLabRequest.getModel();
 
         model.setRowCount(0);
 
@@ -57,7 +57,7 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        workRequestJTable.setRowSorter(sorter);
+        tblLabRequest.setRowSorter(sorter);
     }
 
     /**
@@ -70,16 +70,16 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        assignJButton = new javax.swing.JButton();
-        processJButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        tblLabRequest = new javax.swing.JTable();
+        btnAssign = new javax.swing.JButton();
+        btnProcess = new javax.swing.JButton();
+        lblLab = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        workRequestJTable.setBackground(new java.awt.Color(0, 153, 255));
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblLabRequest.setBackground(new java.awt.Color(204, 204, 255));
+        tblLabRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -105,48 +105,48 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(tblLabRequest);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(10, 20, 730, 90);
 
-        assignJButton.setBackground(new java.awt.Color(0, 153, 255));
-        assignJButton.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        assignJButton.setText("Assign To Self");
-        assignJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnAssign.setBackground(new java.awt.Color(0, 153, 255));
+        btnAssign.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnAssign.setText("Self Assignment");
+        btnAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButtonActionPerformed(evt);
+                btnAssignActionPerformed(evt);
             }
         });
-        add(assignJButton);
-        assignJButton.setBounds(200, 130, 140, 30);
+        add(btnAssign);
+        btnAssign.setBounds(200, 130, 140, 30);
 
-        processJButton.setBackground(new java.awt.Color(0, 153, 255));
-        processJButton.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        processJButton.setText("Process");
-        processJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnProcess.setBackground(new java.awt.Color(0, 153, 255));
+        btnProcess.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnProcess.setText("Proceed");
+        btnProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processJButtonActionPerformed(evt);
+                btnProcessActionPerformed(evt);
             }
         });
-        add(processJButton);
-        processJButton.setBounds(400, 130, 140, 30);
+        add(btnProcess);
+        btnProcess.setBounds(400, 130, 140, 30);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab.gif"))); // NOI18N
-        add(jLabel2);
-        jLabel2.setBounds(10, 170, 740, 300);
+        lblLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab2.jpeg"))); // NOI18N
+        add(lblLab);
+        lblLab.setBounds(10, 170, 740, 300);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
+    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
 
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblLabRequest.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null,"Please select a row first");
             return;
         }
 
-        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
+        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) tblLabRequest.getValueAt(selectedRow, 0);
         if (request.getLabAssistant() == null) {
             if (request.getStatus().equalsIgnoreCase("SentToLab")) {
                 request.setLabAssistant(userAccount);
@@ -170,18 +170,18 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
             }
         }
 
-    }//GEN-LAST:event_assignJButtonActionPerformed
+    }//GEN-LAST:event_btnAssignActionPerformed
 
-    private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
+    private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
 
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblLabRequest.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row");
             return;
         }
 
-        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) workRequestJTable.getValueAt(selectedRow, 0);
+        PatientTreatmentWorkRequest request = (PatientTreatmentWorkRequest) tblLabRequest.getValueAt(selectedRow, 0);
 
        // request.setStatus("Processing");
         ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, request);
@@ -203,13 +203,13 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "Please assign the request first");
         }
-    }//GEN-LAST:event_processJButtonActionPerformed
+    }//GEN-LAST:event_btnProcessActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton assignJButton;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnAssign;
+    private javax.swing.JButton btnProcess;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton processJButton;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JLabel lblLab;
+    private javax.swing.JTable tblLabRequest;
     // End of variables declaration//GEN-END:variables
 }
