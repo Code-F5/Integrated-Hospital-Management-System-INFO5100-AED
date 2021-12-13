@@ -148,9 +148,11 @@ public class ProcessRequestJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(10, 11, 81, 25);
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel1.setText("FINANCE DEPARTMENT APPROVAL PANEL");
         add(jLabel1);
-        jLabel1.setBounds(320, 20, 41, 16);
+        jLabel1.setBounds(210, 20, 380, 25);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMessageActionPerformed
