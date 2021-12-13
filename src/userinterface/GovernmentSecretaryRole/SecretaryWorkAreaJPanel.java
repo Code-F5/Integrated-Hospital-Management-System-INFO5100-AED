@@ -51,15 +51,15 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
+        tblWorkRequest = new javax.swing.JTable();
         btnAssigntoSelf = new javax.swing.JButton();
         btnProcessRequest = new javax.swing.JButton();
         lblSecretery = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        workRequestJTable.setBackground(new java.awt.Color(204, 204, 255));
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblWorkRequest.setBackground(new java.awt.Color(204, 204, 255));
+        tblWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -85,7 +85,7 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(tblWorkRequest);
 
         btnAssigntoSelf.setBackground(new java.awt.Color(0, 153, 255));
         btnAssigntoSelf.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -144,12 +144,12 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAssigntoSelfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssigntoSelfActionPerformed
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblWorkRequest.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
             return;
         } else {
-            WorkRequest request = (GovernmentFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
+            WorkRequest request = (GovernmentFundRequest) tblWorkRequest.getValueAt(selectedRow, 0);
             if (request.getStatus().equals("Sent to Secretary")) {
                 request.setReceiver(userAccount);
                 request.setStatus("Pending on " + request.getReceiver().getEmployee().getEmployeename());
@@ -164,12 +164,12 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
     private void btnProcessRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessRequestActionPerformed
         // TODO add your handling code here:
 
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblWorkRequest.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
             return;
         } else {
-            GovernmentFundRequest fundRequest = (GovernmentFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
+            GovernmentFundRequest fundRequest = (GovernmentFundRequest) tblWorkRequest.getValueAt(selectedRow, 0);
             if (fundRequest.getStatus().equals("Rejected")) {
                 JOptionPane.showMessageDialog(null, "Cannot process a Rejected Request", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
@@ -202,7 +202,7 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnProcessRequestActionPerformed
 
     public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblWorkRequest.getModel();
 
         model.setRowCount(0);
 
@@ -223,7 +223,7 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        workRequestJTable.setRowSorter(sorter);
+        tblWorkRequest.setRowSorter(sorter);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -231,6 +231,6 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnProcessRequest;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblSecretery;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JTable tblWorkRequest;
     // End of variables declaration//GEN-END:variables
 }

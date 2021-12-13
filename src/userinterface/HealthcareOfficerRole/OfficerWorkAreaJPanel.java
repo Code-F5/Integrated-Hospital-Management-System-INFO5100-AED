@@ -52,20 +52,20 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblHealthOfficer = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
+        tblWorkRequest = new javax.swing.JTable();
         btnAssign = new javax.swing.JButton();
-        processRequestBtn = new javax.swing.JButton();
+        btnProcessRequest = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel1.setText("WORK-AREA GOVERNMENT HEALTH OFFICER");
+        lblHealthOfficer.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblHealthOfficer.setForeground(new java.awt.Color(204, 0, 0));
+        lblHealthOfficer.setText("WORK-AREA GOVERNMENT HEALTH OFFICER");
 
-        workRequestJTable.setBackground(new java.awt.Color(0, 153, 255));
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblWorkRequest.setBackground(new java.awt.Color(204, 204, 255));
+        tblWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -91,7 +91,7 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(tblWorkRequest);
 
         btnAssign.setBackground(new java.awt.Color(0, 153, 255));
         btnAssign.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -102,12 +102,12 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        processRequestBtn.setBackground(new java.awt.Color(0, 153, 255));
-        processRequestBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        processRequestBtn.setText("Process Request");
-        processRequestBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnProcessRequest.setBackground(new java.awt.Color(0, 153, 255));
+        btnProcessRequest.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnProcessRequest.setText("Process Request");
+        btnProcessRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processRequestBtnActionPerformed(evt);
+                btnProcessRequestActionPerformed(evt);
             }
         });
 
@@ -122,75 +122,75 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(217, 217, 217)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblHealthOfficer, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(276, 276, 276)
                         .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(processRequestBtn)))
+                        .addComponent(btnProcessRequest)))
                 .addContainerGap(228, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblHealthOfficer, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(processRequestBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnProcessRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(134, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblWorkRequest.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
+            JOptionPane.showMessageDialog(null, "Please select a row first !!");
             return;
         } else {
-            WorkRequest request = (GovernmentFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
+            WorkRequest request = (GovernmentFundRequest) tblWorkRequest.getValueAt(selectedRow, 0);
             if (request.getStatus().equals("Sent")) {
                 request.setReceiver(userAccount);
                 request.setStatus("Pending on " + request.getReceiver().getEmployee().getEmployeename());
                 populateTable();
-                JOptionPane.showMessageDialog(null, "Success !! Request is assigned to you ");
+                JOptionPane.showMessageDialog(null, "Success !!"+" Request is assigned to you ");
             } else {
                 JOptionPane.showMessageDialog(null, "Can't assign this work request, as the work request is in " + request.getStatus() + " status", "Warning!", JOptionPane.WARNING_MESSAGE);
             }
         }
     }
-    private void processRequestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processRequestBtnActionPerformed
+    private void btnProcessRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessRequestActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblWorkRequest.getSelectedRow();
         if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
+            JOptionPane.showMessageDialog(null, "Please select a row first !!");
             return;
         } else {
 
-            GovernmentFundRequest request = (GovernmentFundRequest) workRequestJTable.getValueAt(selectedRow, 0);
+            GovernmentFundRequest request = (GovernmentFundRequest) tblWorkRequest.getValueAt(selectedRow, 0);
 
             if (request.getStatus().equals("Rejected")) {
-                JOptionPane.showMessageDialog(null, "Cannot process a Rejected Request", "Warning!", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Selected Rejected Request", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
             if (request.getStatus().equalsIgnoreCase("Sent to Secretary")) {
-                JOptionPane.showMessageDialog(null, "Request already processed", "Warning!", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Request is already processed", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
             if (request.getStatus().equalsIgnoreCase("Sent")) {
-                JOptionPane.showMessageDialog(null, "Assign the request first");
+                JOptionPane.showMessageDialog(null, "Make sure to assign the request first");
                 return;
             }
             if (!userAccount.equals(request.getReceiver())) {
-                JOptionPane.showMessageDialog(null, "Not Authorized", "Warning!", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Unauthorized", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             }
 
             if (!userAccount.getEmployee().equals(request.getReceiver().getEmployee())) {
-                JOptionPane.showMessageDialog(null, "Request assigned to other Officer", "Warning!", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Request is not assigned to you !", "Warning!", JOptionPane.WARNING_MESSAGE);
                 return;
             } else {
 
@@ -200,19 +200,19 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
                 layout.next(jPanel);
 
             }
-    }//GEN-LAST:event_processRequestBtnActionPerformed
+    }//GEN-LAST:event_btnProcessRequestActionPerformed
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAssign;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnProcessRequest;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton processRequestBtn;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JLabel lblHealthOfficer;
+    private javax.swing.JTable tblWorkRequest;
     // End of variables declaration//GEN-END:variables
 
     public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblWorkRequest.getModel();
 
         model.setRowCount(0);
 
@@ -232,6 +232,6 @@ public class OfficerWorkAreaJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        workRequestJTable.setRowSorter(sorter);
+        tblWorkRequest.setRowSorter(sorter);
     }
 }
