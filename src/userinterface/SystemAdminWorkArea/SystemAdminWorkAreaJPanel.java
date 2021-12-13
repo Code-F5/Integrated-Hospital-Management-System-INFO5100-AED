@@ -2,6 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ *  
  */
 package userinterface.SystemAdminWorkArea;
 
@@ -17,7 +18,7 @@ import javax.swing.tree.DefaultTreeModel;
 
 /**
  *
- * @author Dell
+ *  @author VIRAJ
  */
 public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -34,7 +35,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     }
     
     public void populateTree(){
-        DefaultTreeModel model=(DefaultTreeModel)jTree.getModel();
+        DefaultTreeModel model=(DefaultTreeModel)TreeHierarchy.getModel();
         ArrayList<Network> networkList=ecosystem.getNetworks();
         ArrayList<Enterprise> enterpriseList;
         ArrayList<Organization> organizationList;
@@ -85,25 +86,25 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jSplitPane = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTree = new javax.swing.JTree();
+        TreeHierarchy = new javax.swing.JTree();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lblSelectedNodeBar = new javax.swing.JLabel();
         lblSelectedNode = new javax.swing.JLabel();
         btnManageNetwork = new javax.swing.JButton();
         btnManageEnterprise = new javax.swing.JButton();
         btnManageAdmin = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblSystemAdminPanel = new javax.swing.JLabel();
+        lblPhoto = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
 
-        jTree.setForeground(new java.awt.Color(255, 255, 255));
-        jTree.addTreeSelectionListener(new javax.swing.event.TreeSelectionListener() {
+        TreeHierarchy.setForeground(new java.awt.Color(255, 255, 255));
+        TreeHierarchy.addTreeSelectionListener(new javax.swing.event.TreeSelectionListener() {
             public void valueChanged(javax.swing.event.TreeSelectionEvent evt) {
-                jTreeValueChanged(evt);
+                TreeHierarchyValueChanged(evt);
             }
         });
-        jScrollPane1.setViewportView(jTree);
+        jScrollPane1.setViewportView(TreeHierarchy);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -122,8 +123,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel1.setText("SELECTED NODE :");
+        lblSelectedNodeBar.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblSelectedNodeBar.setText("SELECTED NODE :");
 
         lblSelectedNode.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblSelectedNode.setText("<View_selected_node>");
@@ -155,11 +156,11 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel2.setText("SYSTEM ADMIN PANEL");
+        lblSystemAdminPanel.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblSystemAdminPanel.setForeground(new java.awt.Color(204, 0, 0));
+        lblSystemAdminPanel.setText("SYSTEM ADMIN PANEL");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin3.gif"))); // NOI18N
+        lblPhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin3.gif"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -167,7 +168,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(278, 278, 278)
-                .addComponent(jLabel2)
+                .addComponent(lblSystemAdminPanel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -178,12 +179,12 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(lblSelectedNodeBar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblSelectedNode)
                         .addGap(368, 368, 368))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(88, Short.MAX_VALUE))))
         );
 
@@ -193,7 +194,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jLabel2)
+                .addComponent(lblSystemAdminPanel)
                 .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -202,11 +203,11 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                         .addComponent(btnManageEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28)
                         .addComponent(btnManageAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(128, 128, 128)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblSelectedNode)
-                    .addComponent(jLabel1))
+                    .addComponent(lblSelectedNodeBar))
                 .addGap(142, 142, 142))
         );
 
@@ -238,27 +239,27 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageAdminActionPerformed
 
-    private void jTreeValueChanged(javax.swing.event.TreeSelectionEvent evt) {//GEN-FIRST:event_jTreeValueChanged
+    private void TreeHierarchyValueChanged(javax.swing.event.TreeSelectionEvent evt) {//GEN-FIRST:event_TreeHierarchyValueChanged
         
-        DefaultMutableTreeNode selectedNode= (DefaultMutableTreeNode)jTree.getLastSelectedPathComponent();
+        DefaultMutableTreeNode selectedNode= (DefaultMutableTreeNode)TreeHierarchy.getLastSelectedPathComponent();
         if(selectedNode!=null){
             lblSelectedNode.setText(selectedNode.toString());
         }
-    }//GEN-LAST:event_jTreeValueChanged
+    }//GEN-LAST:event_TreeHierarchyValueChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTree TreeHierarchy;
     private javax.swing.JButton btnManageAdmin;
     private javax.swing.JButton btnManageEnterprise;
     private javax.swing.JButton btnManageNetwork;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane;
-    private javax.swing.JTree jTree;
+    private javax.swing.JLabel lblPhoto;
     private javax.swing.JLabel lblSelectedNode;
+    private javax.swing.JLabel lblSelectedNodeBar;
+    private javax.swing.JLabel lblSystemAdminPanel;
     // End of variables declaration//GEN-END:variables
 }

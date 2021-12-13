@@ -1,6 +1,7 @@
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
+ * @author VIRAJ
  */
 package userinterface.SystemAdminWorkArea;
 
@@ -38,10 +39,10 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
      */
     public ManageEnterpriseAdminJPanel(JPanel userProcessContainer, EcoSystem system) {
         initComponents();
-        usernameJTextField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        reEnterPasswordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        nameJTextField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        txtUsername.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        pfPassword.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        pfReenterPassword.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        txtName.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         
         this.userProcessContainer = userProcessContainer;
         this.system = system;
@@ -51,7 +52,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     }
 
     private void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) enterpriseJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblEnterprise.getModel();
 
         model.setRowCount(0);
         for (Network network : system.getNetworks()) {
@@ -66,26 +67,26 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                     model.addRow(row);
                 }
                 TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        enterpriseJTable.setRowSorter(sorter);
+        tblEnterprise.setRowSorter(sorter);
             }
         }
          TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        enterpriseJTable.setRowSorter(sorter);
+        tblEnterprise.setRowSorter(sorter);
     }
 
     private void populateNetworkComboBox() {
-        networkJComboBox.removeAllItems();
+        cbNetwork.removeAllItems();
 
         for (Network network : system.getNetworks()) {
-            networkJComboBox.addItem(network);
+            cbNetwork.addItem(network);
         }
     }
 
     private void populateEnterpriseComboBox(Network network) {
-        enterpriseJComboBox.removeAllItems();
+        cbEnterprise.removeAllItems();
 
         for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
-            enterpriseJComboBox.addItem(enterprise);
+            cbEnterprise.addItem(enterprise);
         }
 
     }
@@ -100,29 +101,29 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        enterpriseJTable = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        networkJComboBox = new javax.swing.JComboBox();
-        usernameJLabel = new javax.swing.JLabel();
-        usernameJTextField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        enterpriseJComboBox = new javax.swing.JComboBox();
+        tblEnterprise = new javax.swing.JTable();
+        lblNetwork = new javax.swing.JLabel();
+        cbNetwork = new javax.swing.JComboBox();
+        lblUsername = new javax.swing.JLabel();
+        txtUsername = new javax.swing.JTextField();
+        lblEnterprise = new javax.swing.JLabel();
+        cbEnterprise = new javax.swing.JComboBox();
         submitJButton = new javax.swing.JButton();
-        passwordJLabel = new javax.swing.JLabel();
-        nameJTextField = new javax.swing.JTextField();
-        nameJLabel = new javax.swing.JLabel();
-        passwordJPasswordField = new javax.swing.JPasswordField();
-        backJButton = new javax.swing.JButton();
-        reEnterPasswordJPasswordField = new javax.swing.JPasswordField();
-        rePasswordJLabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblPassword = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        lblName = new javax.swing.JLabel();
+        pfPassword = new javax.swing.JPasswordField();
+        btnBack = new javax.swing.JButton();
+        pfReenterPassword = new javax.swing.JPasswordField();
+        lblPasswordConfirm = new javax.swing.JLabel();
+        lblManageEnterPrisePanel = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        enterpriseJTable.setBackground(new java.awt.Color(0, 153, 255));
-        enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblEnterprise.setBackground(new java.awt.Color(204, 204, 255));
+        tblEnterprise.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -141,40 +142,40 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(enterpriseJTable);
+        jScrollPane1.setViewportView(tblEnterprise);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(26, 62, 671, 88);
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel1.setText("Network :");
-        add(jLabel1);
-        jLabel1.setBounds(88, 168, 63, 17);
+        lblNetwork.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblNetwork.setText("Network :");
+        add(lblNetwork);
+        lblNetwork.setBounds(88, 168, 70, 17);
 
-        networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        networkJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        cbNetwork.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbNetwork.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                networkJComboBoxActionPerformed(evt);
+                cbNetworkActionPerformed(evt);
             }
         });
-        add(networkJComboBox);
-        networkJComboBox.setBounds(182, 166, 136, 22);
+        add(cbNetwork);
+        cbNetwork.setBounds(190, 170, 136, 21);
 
-        usernameJLabel.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        usernameJLabel.setText("Username :");
-        add(usernameJLabel);
-        usernameJLabel.setBounds(81, 232, 70, 17);
-        add(usernameJTextField);
-        usernameJTextField.setBounds(182, 228, 136, 25);
+        lblUsername.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblUsername.setText("Username :");
+        add(lblUsername);
+        lblUsername.setBounds(81, 232, 80, 17);
+        add(txtUsername);
+        txtUsername.setBounds(190, 230, 136, 20);
 
-        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel3.setText("Enterprise :");
-        add(jLabel3);
-        jLabel3.setBounds(70, 200, 84, 17);
+        lblEnterprise.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblEnterprise.setText("Enterprise :");
+        add(lblEnterprise);
+        lblEnterprise.setBounds(70, 200, 90, 17);
 
-        enterpriseJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(enterpriseJComboBox);
-        enterpriseJComboBox.setBounds(182, 197, 136, 22);
+        cbEnterprise.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(cbEnterprise);
+        cbEnterprise.setBounds(190, 200, 136, 21);
 
         submitJButton.setBackground(new java.awt.Color(0, 153, 255));
         submitJButton.setText("Submit");
@@ -184,83 +185,83 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(submitJButton);
-        submitJButton.setBounds(182, 375, 80, 25);
+        submitJButton.setBounds(170, 390, 80, 21);
 
-        passwordJLabel.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        passwordJLabel.setText("Password :");
-        add(passwordJLabel);
-        passwordJLabel.setBounds(84, 268, 70, 17);
-        add(nameJTextField);
-        nameJTextField.setBounds(182, 341, 136, 28);
+        lblPassword.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblPassword.setText("Password :");
+        add(lblPassword);
+        lblPassword.setBounds(84, 268, 80, 17);
+        add(txtName);
+        txtName.setBounds(190, 348, 136, 20);
 
-        nameJLabel.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        nameJLabel.setText("Name :");
-        add(nameJLabel);
-        nameJLabel.setBounds(110, 350, 50, 17);
-        add(passwordJPasswordField);
-        passwordJPasswordField.setBounds(182, 264, 136, 25);
+        lblName.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblName.setText("Name :");
+        add(lblName);
+        lblName.setBounds(110, 350, 50, 17);
+        add(pfPassword);
+        pfPassword.setBounds(190, 270, 136, 25);
 
-        backJButton.setBackground(new java.awt.Color(0, 153, 255));
-        backJButton.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        backJButton.setText("<< Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setBackground(new java.awt.Color(0, 153, 255));
+        btnBack.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        btnBack.setText("<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(10, 11, 81, 25);
-        add(reEnterPasswordJPasswordField);
-        reEnterPasswordJPasswordField.setBounds(182, 300, 136, 29);
+        add(btnBack);
+        btnBack.setBounds(10, 11, 81, 25);
+        add(pfReenterPassword);
+        pfReenterPassword.setBounds(190, 309, 136, 20);
 
-        rePasswordJLabel.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        rePasswordJLabel.setText("Confirm Password :");
-        add(rePasswordJLabel);
-        rePasswordJLabel.setBounds(30, 310, 126, 17);
+        lblPasswordConfirm.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblPasswordConfirm.setText("Confirm Password :");
+        add(lblPasswordConfirm);
+        lblPasswordConfirm.setBounds(30, 310, 130, 17);
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel2.setText("MANAGE ENTERPRISE PANEL");
-        add(jLabel2);
-        jLabel2.setBounds(230, 10, 270, 25);
+        lblManageEnterPrisePanel.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblManageEnterPrisePanel.setForeground(new java.awt.Color(204, 0, 0));
+        lblManageEnterPrisePanel.setText("MANAGE ENTERPRISE PANEL");
+        add(lblManageEnterPrisePanel);
+        lblManageEnterPrisePanel.setBounds(230, 10, 260, 25);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin4.gif"))); // NOI18N
         add(jLabel4);
-        jLabel4.setBounds(20, 160, 680, 310);
+        jLabel4.setBounds(20, 170, 680, 310);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed
+    private void cbNetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbNetworkActionPerformed
 
-        Network network = (Network) networkJComboBox.getSelectedItem();
+        Network network = (Network) cbNetwork.getSelectedItem();
         if (network != null) {
             populateEnterpriseComboBox(network);
         }
 
 
-    }//GEN-LAST:event_networkJComboBoxActionPerformed
+    }//GEN-LAST:event_cbNetworkActionPerformed
 
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
 
-        Enterprise enterprise = (Enterprise) enterpriseJComboBox.getSelectedItem();
+        Enterprise enterprise = (Enterprise) cbEnterprise.getSelectedItem();
 
-        String username = usernameJTextField.getText();
+        String username = txtUsername.getText();
         Role role = null;
-        String password = String.valueOf(passwordJPasswordField.getPassword());
-        String rePassword = String.valueOf(reEnterPasswordJPasswordField.getPassword());
-        String name = nameJTextField.getText();
+        String password = String.valueOf(pfPassword.getPassword());
+        String rePassword = String.valueOf(pfReenterPassword.getPassword());
+        String name = txtName.getText();
 
         if (username == null || username.equals("")) {
-            usernameJTextField.setBorder(BorderFactory.createLineBorder(Color.RED));
-            usernameJLabel.setForeground(Color.RED);
+            txtUsername.setBorder(BorderFactory.createLineBorder(Color.RED));
+            lblUsername.setForeground(Color.RED);
             JOptionPane.showMessageDialog(null, "Username can't be empty");
             return;
         }
         if (password == null || password.equals("")) {
-            usernameJTextField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            usernameJLabel.setForeground(Color.BLACK);
-            passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.RED));
-            passwordJLabel.setForeground(Color.RED);
+            txtUsername.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            lblUsername.setForeground(Color.BLACK);
+            pfPassword.setBorder(BorderFactory.createLineBorder(Color.RED));
+            lblPassword.setForeground(Color.RED);
             JOptionPane.showMessageDialog(null, "Password can't be empty");
             return;
         }
@@ -269,27 +270,27 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Password should be at least 6 Characters "
                     + "digits and a combination of number , uppercase letter, "
                     + "lowercase letter and Special characters are not allowed other than $, +, _");
-            passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.RED));
-            passwordJLabel.setForeground(Color.RED);
+            pfPassword.setBorder(BorderFactory.createLineBorder(Color.RED));
+            lblPassword.setForeground(Color.RED);
             return;
         }
 
         if (!password.equals(rePassword)) {
             JOptionPane.showMessageDialog(null, "Passwords don't match");
-            passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.RED));
-            reEnterPasswordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.RED));
-            passwordJLabel.setForeground(Color.RED);
-            rePasswordJLabel.setForeground(Color.RED);
+            pfPassword.setBorder(BorderFactory.createLineBorder(Color.RED));
+            pfReenterPassword.setBorder(BorderFactory.createLineBorder(Color.RED));
+            lblPassword.setForeground(Color.RED);
+            lblPasswordConfirm.setForeground(Color.RED);
             return;
         }
 
         if (name == null || name.equals("")) {
-            passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            reEnterPasswordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            passwordJLabel.setForeground(Color.BLACK);
-            rePasswordJLabel.setForeground(Color.BLACK);
-            nameJTextField.setBorder(BorderFactory.createLineBorder(Color.RED));
-            nameJLabel.setForeground(Color.RED);
+            pfPassword.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            pfReenterPassword.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            lblPassword.setForeground(Color.BLACK);
+            lblPasswordConfirm.setForeground(Color.BLACK);
+            txtName.setBorder(BorderFactory.createLineBorder(Color.RED));
+            lblName.setForeground(Color.RED);
             JOptionPane.showMessageDialog(null, "Name can't be empty");
             return;
         } else {
@@ -297,7 +298,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             for (UserAccount userAccount : userAccountList) {
                 if (userAccount.getUsername().equals(username)) {
                     JOptionPane.showMessageDialog(null, "username already taken!!");
-                    usernameJTextField.setBorder(BorderFactory.createLineBorder(Color.RED));
+                    txtUsername.setBorder(BorderFactory.createLineBorder(Color.RED));
                     return;
                 }
             }
@@ -306,29 +307,29 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             UserAccount userAccount = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new EnterpriseAdminRole());
             populateTable();
 
-            passwordJLabel.setForeground(Color.BLACK);
-            rePasswordJLabel.setForeground(Color.BLACK);
-            nameJLabel.setForeground(Color.BLACK);
-            nameJTextField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            passwordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            reEnterPasswordJPasswordField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            nameJTextField.setText("");
-            passwordJPasswordField.setText("");
-            reEnterPasswordJPasswordField.setText("");
-            usernameJTextField.setText("");
+            lblPassword.setForeground(Color.BLACK);
+            lblPasswordConfirm.setForeground(Color.BLACK);
+            lblName.setForeground(Color.BLACK);
+            txtName.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            pfPassword.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            pfReenterPassword.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            txtName.setText("");
+            pfPassword.setText("");
+            pfReenterPassword.setText("");
+            txtUsername.setText("");
         }
 
     }//GEN-LAST:event_submitJButtonActionPerformed
 
     private boolean passwordPatternCorrect() {
         Pattern p = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$+_])(?=\\S+$).{6,}$");
-        Matcher m = p.matcher(String.valueOf(passwordJPasswordField.getPassword()));
+        Matcher m = p.matcher(String.valueOf(pfPassword.getPassword()));
         boolean b = m.matches();
         return b;
     }
 
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -336,26 +337,26 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JComboBox enterpriseJComboBox;
-    private javax.swing.JTable enterpriseJTable;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JComboBox cbEnterprise;
+    private javax.swing.JComboBox cbNetwork;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel nameJLabel;
-    private javax.swing.JTextField nameJTextField;
-    private javax.swing.JComboBox networkJComboBox;
-    private javax.swing.JLabel passwordJLabel;
-    private javax.swing.JPasswordField passwordJPasswordField;
-    private javax.swing.JPasswordField reEnterPasswordJPasswordField;
-    private javax.swing.JLabel rePasswordJLabel;
+    private javax.swing.JLabel lblEnterprise;
+    private javax.swing.JLabel lblManageEnterPrisePanel;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblNetwork;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblPasswordConfirm;
+    private javax.swing.JLabel lblUsername;
+    private javax.swing.JPasswordField pfPassword;
+    private javax.swing.JPasswordField pfReenterPassword;
     private javax.swing.JButton submitJButton;
-    private javax.swing.JLabel usernameJLabel;
-    private javax.swing.JTextField usernameJTextField;
+    private javax.swing.JTable tblEnterprise;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }

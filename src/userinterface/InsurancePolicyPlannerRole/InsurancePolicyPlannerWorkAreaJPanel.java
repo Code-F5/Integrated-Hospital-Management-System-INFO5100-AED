@@ -18,7 +18,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author Dell
+ * @author VIRAJ
  */
 public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -49,45 +49,46 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblCreateNewPolicy = new javax.swing.JLabel();
+        lblPolicyName = new javax.swing.JLabel();
         txtPolicyName = new javax.swing.JTextField();
-        txtPolicyCoverage = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        txtPolicyCoveragePercentage = new javax.swing.JTextField();
+        lblCoverage = new javax.swing.JLabel();
         txtPolicyTC = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        lblTermsAndConditions = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        lblPolicyPlannerWorkArea = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblPolicies = new javax.swing.JTable();
         btnCreatePolicy = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        txtMonthlyPrem = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        lblMonthyPremium = new javax.swing.JLabel();
+        txtMonthlyPremium = new javax.swing.JTextField();
+        lblPhoto = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 14)); // NOI18N
-        jLabel1.setText("CREATE NEW POLICY");
+        lblCreateNewPolicy.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 14)); // NOI18N
+        lblCreateNewPolicy.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCreateNewPolicy.setText("CREATE NEW POLICY");
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel2.setText("Policy Name: ");
+        lblPolicyName.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblPolicyName.setText("Policy Name: ");
 
-        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel3.setText("Policy Coverage: ");
+        lblCoverage.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblCoverage.setText("Policy Coverage: ");
 
-        jLabel4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel4.setText("Policy Terms & Condition: ");
+        lblTermsAndConditions.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblTermsAndConditions.setText("Policy Terms & Conditions: ");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("%");
 
-        jLabel6.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel6.setText("POLICY PLANNER WORK AREA");
+        lblPolicyPlannerWorkArea.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblPolicyPlannerWorkArea.setForeground(new java.awt.Color(153, 0, 0));
+        lblPolicyPlannerWorkArea.setText("POLICY PLANNER WORK AREA");
 
-        tblPolicies.setBackground(new java.awt.Color(0, 153, 255));
+        tblPolicies.setBackground(new java.awt.Color(204, 204, 255));
         tblPolicies.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -118,10 +119,10 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel7.setText("Monthly Premium(USD):");
+        lblMonthyPremium.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblMonthyPremium.setText("Monthly Premium(USD):");
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/policy.gif"))); // NOI18N
+        lblPhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/policy.gif"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -135,39 +136,37 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(176, 176, 176)
-                        .addComponent(jLabel6))
+                        .addComponent(lblPolicyPlannerWorkArea))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(300, 300, 300)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(439, 439, 439)
+                        .addComponent(lblCreateNewPolicy, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(292, 292, 292)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(139, 139, 139)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lblPolicyName)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtPolicyName, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txtPolicyName, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txtPolicyCoverage, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txtMonthlyPrem, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txtPolicyTC, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel5))
+                                .addComponent(lblCoverage, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtPolicyCoveragePercentage, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(134, 134, 134)
-                                .addComponent(btnCreatePolicy)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(lblMonthyPremium)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtMonthlyPremium, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblTermsAndConditions, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtPolicyTC, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(434, 434, 434)
+                        .addComponent(btnCreatePolicy)))
+                .addContainerGap(351, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,30 +174,30 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(135, 135, 135)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblPolicyPlannerWorkArea, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(5, 5, 5)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(34, 34, 34)
+                .addComponent(lblCreateNewPolicy)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(lblPolicyName)
                     .addComponent(txtPolicyName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtPolicyCoverage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCoverage)
+                    .addComponent(txtPolicyCoveragePercentage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(txtMonthlyPrem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblMonthyPremium)
+                    .addComponent(txtMonthlyPremium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(lblTermsAndConditions)
                     .addComponent(txtPolicyTC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnCreatePolicy)
@@ -208,27 +207,11 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnCreatePolicyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePolicyActionPerformed
         String policyName = txtPolicyName.getText().trim();
-        String poliCoverageTxt = txtPolicyCoverage.getText().trim();
-        String monthlyPremiumTxt = txtMonthlyPrem.getText().trim();
+        String poliCoverageTxt = txtPolicyCoveragePercentage.getText().trim();
+        String monthlyPremiumTxt = txtMonthlyPremium.getText().trim();
         String policyTC = txtPolicyTC.getText().trim();
-        if (policyName.equals("")) {
-            JOptionPane.showMessageDialog(null, "Policy Name is mandatory");
-            return;
-        }
-
-        if (poliCoverageTxt.equals("")) {
-            JOptionPane.showMessageDialog(null, "Policy Coverage is mandatory");
-            return;
-        }
-
-        if (monthlyPremiumTxt.equals("")) {
-            JOptionPane.showMessageDialog(null, "Monthly Premium is mandatory");
-            return;
-        }
-
-        if (policyTC.equals("")) {
-            JOptionPane.showMessageDialog(null, "Policy TC is mandatory");
-            return;
+        if (policyName.isEmpty() || poliCoverageTxt.isEmpty() || monthlyPremiumTxt.isEmpty() || policyTC.isEmpty() ){
+            JOptionPane.showMessageDialog(null, "All 4 fields are mandatory.");
         }
 
         double policyCoverage = 0;
@@ -250,7 +233,7 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
         List<Insurance> policies = insuranceCompanyEnterprise.getInsurancePolicyList().getInsurancePolicies();
         for (Insurance insurance : policies) {
             if (policyName.equalsIgnoreCase(insurance.getPolicyName())) {
-                JOptionPane.showMessageDialog(null, "Policy already exists, please provide some other policy name");
+                JOptionPane.showMessageDialog(null, "This policy already exists, please provide another policy name.");
                 return;
             }
         }
@@ -264,8 +247,8 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
         System.out.println("Policy Added Successfully:" + insuranceCompanyEnterprise.getInsurancePolicyList().getInsurancePolicies());
         populateTable();
         txtPolicyName.setText("");
-        txtMonthlyPrem.setText("");
-        txtPolicyCoverage.setText("");
+        txtMonthlyPremium.setText("");
+        txtPolicyCoveragePercentage.setText("");
         txtPolicyTC.setText("");
 
     }//GEN-LAST:event_btnCreatePolicyActionPerformed
@@ -273,18 +256,18 @@ public class InsurancePolicyPlannerWorkAreaJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCreatePolicy;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblCoverage;
+    private javax.swing.JLabel lblCreateNewPolicy;
+    private javax.swing.JLabel lblMonthyPremium;
+    private javax.swing.JLabel lblPhoto;
+    private javax.swing.JLabel lblPolicyName;
+    private javax.swing.JLabel lblPolicyPlannerWorkArea;
+    private javax.swing.JLabel lblTermsAndConditions;
     private javax.swing.JTable tblPolicies;
-    private javax.swing.JTextField txtMonthlyPrem;
-    private javax.swing.JTextField txtPolicyCoverage;
+    private javax.swing.JTextField txtMonthlyPremium;
+    private javax.swing.JTextField txtPolicyCoveragePercentage;
     private javax.swing.JTextField txtPolicyName;
     private javax.swing.JTextField txtPolicyTC;
     // End of variables declaration//GEN-END:variables

@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Dell
+ * @author VIRAJ
  */
 public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
 
@@ -33,12 +33,12 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.userAccount = userAccount;
         this.insuranceWorkRequest = insuranceWorkRequest;
-        txtPolicyNumber.setText(insuranceWorkRequest.getPolicyId());
-        txtSSN.setText(insuranceWorkRequest.getSsn());
+        txtPolicyNum.setText(insuranceWorkRequest.getPolicyId());
+        txtSocialSecurity.setText(insuranceWorkRequest.getSsn());
         txtPolicyName.setText(insuranceWorkRequest.getPolicyName());
-        txtClaimAmount.setText(String.valueOf(insuranceWorkRequest.getAmountClaimed()));
-        txtBillingAmount.setText(String.valueOf(insuranceWorkRequest.getAmountBilled()));
-        txtCoverage.setText(String.valueOf(insuranceWorkRequest.getInsuranceCustomer().getInsurance().getCoveragepercentage()));
+        txtAmountClaimed.setText(String.valueOf(insuranceWorkRequest.getAmountClaimed()));
+        txtBillingAmt.setText(String.valueOf(insuranceWorkRequest.getAmountBilled()));
+        txtCoveragePercent.setText(String.valueOf(insuranceWorkRequest.getInsuranceCustomer().getInsurance().getCoveragepercentage()));
     }
 
     /**
@@ -50,51 +50,52 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnDisburse = new javax.swing.JButton();
-        btnReject = new javax.swing.JButton();
+        btnDisburseAmt = new javax.swing.JButton();
+        btnRejectClaim = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        backBtn = new javax.swing.JButton();
-        txtPolicyNumber = new javax.swing.JTextField();
+        btnBack = new javax.swing.JButton();
+        txtPolicyNum = new javax.swing.JTextField();
         txtPolicyName = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        txtBillingAmount = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        txtClaimAmount = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        txtSSN = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        txtCoverage = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        lblPolicyName = new javax.swing.JLabel();
+        txtBillingAmt = new javax.swing.JTextField();
+        lblBillingAmt = new javax.swing.JLabel();
+        txtAmountClaimed = new javax.swing.JTextField();
+        lblAmountClaimed = new javax.swing.JLabel();
+        lblSSN = new javax.swing.JLabel();
+        txtSocialSecurity = new javax.swing.JTextField();
+        lblCoverage = new javax.swing.JLabel();
+        txtCoveragePercent = new javax.swing.JTextField();
+        lblPhoto = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        btnDisburse.setBackground(new java.awt.Color(0, 153, 255));
-        btnDisburse.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnDisburse.setText("Disburse Amount");
-        btnDisburse.addActionListener(new java.awt.event.ActionListener() {
+        btnDisburseAmt.setBackground(new java.awt.Color(0, 153, 255));
+        btnDisburseAmt.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnDisburseAmt.setText("Disburse Amount");
+        btnDisburseAmt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisburseActionPerformed(evt);
+                btnDisburseAmtActionPerformed(evt);
             }
         });
-        add(btnDisburse);
-        btnDisburse.setBounds(140, 350, 140, 32);
+        add(btnDisburseAmt);
+        btnDisburseAmt.setBounds(140, 350, 140, 32);
 
-        btnReject.setBackground(new java.awt.Color(0, 153, 255));
-        btnReject.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnReject.setText("Reject Claim");
-        btnReject.addActionListener(new java.awt.event.ActionListener() {
+        btnRejectClaim.setBackground(new java.awt.Color(0, 153, 255));
+        btnRejectClaim.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnRejectClaim.setText("Reject Claim");
+        btnRejectClaim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRejectActionPerformed(evt);
+                btnRejectClaimActionPerformed(evt);
             }
         });
-        add(btnReject);
-        btnReject.setBounds(300, 350, 117, 32);
+        add(btnRejectClaim);
+        btnRejectClaim.setBounds(300, 350, 120, 32);
 
         jLabel3.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("INSURANCE REQUEST PROCESS");
         add(jLabel3);
         jLabel3.setBounds(180, 30, 400, 29);
@@ -105,107 +106,112 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         add(jLabel4);
         jLabel4.setBounds(120, 91, 120, 17);
 
-        backBtn.setBackground(new java.awt.Color(0, 153, 255));
-        backBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        backBtn.setText("<<Back");
-        backBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setBackground(new java.awt.Color(0, 153, 255));
+        btnBack.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnBack.setText("<<Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBtnActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(backBtn);
-        backBtn.setBounds(10, 23, 75, 29);
+        add(btnBack);
+        btnBack.setBounds(10, 23, 75, 29);
 
-        txtPolicyNumber.setEditable(false);
-        add(txtPolicyNumber);
-        txtPolicyNumber.setBounds(278, 86, 116, 23);
+        txtPolicyNum.setEditable(false);
+        add(txtPolicyNum);
+        txtPolicyNum.setBounds(278, 86, 116, 23);
 
         txtPolicyName.setEditable(false);
         add(txtPolicyName);
         txtPolicyName.setBounds(278, 209, 116, 23);
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setText("Policy Name :");
-        add(jLabel1);
-        jLabel1.setBounds(132, 211, 110, 17);
+        lblPolicyName.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblPolicyName.setForeground(new java.awt.Color(255, 0, 0));
+        lblPolicyName.setText("Policy Name :");
+        add(lblPolicyName);
+        lblPolicyName.setBounds(132, 211, 110, 17);
 
-        txtBillingAmount.setEditable(false);
-        add(txtBillingAmount);
-        txtBillingAmount.setBounds(278, 247, 116, 23);
+        txtBillingAmt.setEditable(false);
+        add(txtBillingAmt);
+        txtBillingAmt.setBounds(278, 247, 116, 23);
 
-        jLabel6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel6.setText("Billing Amount :");
-        add(jLabel6);
-        jLabel6.setBounds(110, 250, 120, 17);
+        lblBillingAmt.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblBillingAmt.setForeground(new java.awt.Color(255, 0, 0));
+        lblBillingAmt.setText("Billing Amount :");
+        add(lblBillingAmt);
+        lblBillingAmt.setBounds(110, 250, 120, 17);
 
-        txtClaimAmount.setEditable(false);
-        txtClaimAmount.addActionListener(new java.awt.event.ActionListener() {
+        txtAmountClaimed.setEditable(false);
+        txtAmountClaimed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtClaimAmountActionPerformed(evt);
+                txtAmountClaimedActionPerformed(evt);
             }
         });
-        add(txtClaimAmount);
-        txtClaimAmount.setBounds(278, 285, 116, 23);
+        add(txtAmountClaimed);
+        txtAmountClaimed.setBounds(278, 285, 116, 23);
 
-        jLabel7.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel7.setText("Claim Amount :");
-        add(jLabel7);
-        jLabel7.setBounds(130, 290, 100, 17);
+        lblAmountClaimed.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblAmountClaimed.setForeground(new java.awt.Color(255, 0, 0));
+        lblAmountClaimed.setText("Claim Amount :");
+        add(lblAmountClaimed);
+        lblAmountClaimed.setBounds(130, 290, 110, 17);
 
-        jLabel8.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel8.setText("SSN ID :");
-        add(jLabel8);
-        jLabel8.setBounds(167, 129, 70, 17);
+        lblSSN.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblSSN.setForeground(new java.awt.Color(255, 0, 0));
+        lblSSN.setText("SSN :");
+        add(lblSSN);
+        lblSSN.setBounds(190, 130, 40, 17);
 
-        txtSSN.setEditable(false);
-        add(txtSSN);
-        txtSSN.setBounds(278, 124, 116, 23);
+        txtSocialSecurity.setEditable(false);
+        txtSocialSecurity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSocialSecurityActionPerformed(evt);
+            }
+        });
+        add(txtSocialSecurity);
+        txtSocialSecurity.setBounds(278, 124, 116, 23);
 
-        jLabel9.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel9.setText("Conerage% :");
-        add(jLabel9);
-        jLabel9.setBounds(150, 170, 90, 17);
+        lblCoverage.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblCoverage.setForeground(new java.awt.Color(255, 0, 0));
+        lblCoverage.setText("Coverage% :");
+        add(lblCoverage);
+        lblCoverage.setBounds(150, 170, 90, 17);
 
-        txtCoverage.setEditable(false);
-        add(txtCoverage);
-        txtCoverage.setBounds(278, 171, 116, 23);
+        txtCoveragePercent.setEditable(false);
+        add(txtCoveragePercent);
+        txtCoveragePercent.setBounds(278, 171, 116, 23);
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/insurance finance.gif"))); // NOI18N
-        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel2);
-        jLabel2.setBounds(0, 0, 720, 440);
+        lblPhoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/insurance finance.gif"))); // NOI18N
+        lblPhoto.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(lblPhoto);
+        lblPhoto.setBounds(0, 0, 720, 440);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnDisburseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisburseActionPerformed
+    private void btnDisburseAmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisburseAmtActionPerformed
 
-        btnDisburse.setEnabled(true);
+        btnDisburseAmt.setEnabled(true);
         int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
         if (dialogResult == JOptionPane.YES_OPTION) {
             insuranceWorkRequest.setStatus("Insurance Claim Approved");
             JOptionPane.showMessageDialog(null, "Claim Approved Successfully!!!");
-            btnDisburse.setEnabled(false);
-            btnReject.setEnabled(false);
+            btnDisburseAmt.setEnabled(false);
+            btnRejectClaim.setEnabled(false);
         }
-    }//GEN-LAST:event_btnDisburseActionPerformed
+    }//GEN-LAST:event_btnDisburseAmtActionPerformed
 
-    private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
+    private void btnRejectClaimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectClaimActionPerformed
 
         int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to proceed?");
         if (dialogResult == JOptionPane.YES_OPTION) {
             insuranceWorkRequest.setStatus("Insurance Claim Rejected");
-            btnReject.setEnabled(false);
-            btnDisburse.setEnabled(false);
+            btnRejectClaim.setEnabled(false);
+            btnDisburseAmt.setEnabled(false);
         }
 
-    }//GEN-LAST:event_btnRejectActionPerformed
+    }//GEN-LAST:event_btnRejectClaimActionPerformed
 
-    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -214,30 +220,34 @@ public class InsuranceFinanceProcessRequest extends javax.swing.JPanel {
         iwjp.populateTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backBtnActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void txtClaimAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClaimAmountActionPerformed
+    private void txtAmountClaimedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAmountClaimedActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtClaimAmountActionPerformed
+    }//GEN-LAST:event_txtAmountClaimedActionPerformed
+
+    private void txtSocialSecurityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSocialSecurityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSocialSecurityActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backBtn;
-    private javax.swing.JButton btnDisburse;
-    private javax.swing.JButton btnReject;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnDisburseAmt;
+    private javax.swing.JButton btnRejectClaim;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField txtBillingAmount;
-    private javax.swing.JTextField txtClaimAmount;
-    private javax.swing.JTextField txtCoverage;
+    private javax.swing.JLabel lblAmountClaimed;
+    private javax.swing.JLabel lblBillingAmt;
+    private javax.swing.JLabel lblCoverage;
+    private javax.swing.JLabel lblPhoto;
+    private javax.swing.JLabel lblPolicyName;
+    private javax.swing.JLabel lblSSN;
+    private javax.swing.JTextField txtAmountClaimed;
+    private javax.swing.JTextField txtBillingAmt;
+    private javax.swing.JTextField txtCoveragePercent;
     private javax.swing.JTextField txtPolicyName;
-    private javax.swing.JTextField txtPolicyNumber;
-    private javax.swing.JTextField txtSSN;
+    private javax.swing.JTextField txtPolicyNum;
+    private javax.swing.JTextField txtSocialSecurity;
     // End of variables declaration//GEN-END:variables
 }

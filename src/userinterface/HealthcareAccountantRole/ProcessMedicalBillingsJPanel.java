@@ -22,7 +22,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author Dell
+ * @author VIRAJ
  */
 public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
 
@@ -56,30 +56,30 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        processRequestBtn = new javax.swing.JButton();
+        btnProcessRequest = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
+        tblWorkRequest = new javax.swing.JTable();
         btnAssignToMe = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        lblReceptionistPatientBillingArea = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblInsurance = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblInsuranceClaimStatusTable = new javax.swing.JLabel();
+        lblPatientBillingTable = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        processRequestBtn.setBackground(new java.awt.Color(0, 153, 255));
-        processRequestBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        processRequestBtn.setText("Process Request");
-        processRequestBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnProcessRequest.setBackground(new java.awt.Color(0, 153, 255));
+        btnProcessRequest.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnProcessRequest.setText("Process Request");
+        btnProcessRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processRequestBtnActionPerformed(evt);
+                btnProcessRequestActionPerformed(evt);
             }
         });
 
-        workRequestJTable.setBackground(new java.awt.Color(0, 153, 255));
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblWorkRequest.setBackground(new java.awt.Color(204, 204, 255));
+        tblWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -119,7 +119,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(tblWorkRequest);
 
         btnAssignToMe.setBackground(new java.awt.Color(0, 153, 255));
         btnAssignToMe.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -130,19 +130,19 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
             }
         });
 
-        backJButton.setBackground(new java.awt.Color(0, 153, 255));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        backJButton.setText("<<Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setBackground(new java.awt.Color(0, 153, 255));
+        btnBack.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnBack.setText("<<Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Receptionist: Patient Billing Area");
+        lblReceptionistPatientBillingArea.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblReceptionistPatientBillingArea.setText("Receptionist: Patient Billing Area");
 
-        tblInsurance.setBackground(new java.awt.Color(0, 153, 255));
+        tblInsurance.setBackground(new java.awt.Color(204, 204, 255));
         tblInsurance.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -185,11 +185,11 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblInsurance);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Insurance Claim Status Table");
+        lblInsuranceClaimStatusTable.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblInsuranceClaimStatusTable.setText("Insurance Claim Status Table");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Patient Billing Table");
+        lblPatientBillingTable.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblPatientBillingTable.setText("Patient Billing Table");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -201,24 +201,24 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(backJButton)
+                                .addComponent(btnBack)
                                 .addGap(157, 157, 157)
-                                .addComponent(jLabel1))
+                                .addComponent(lblReceptionistPatientBillingArea))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(372, 372, 372)
-                                .addComponent(jLabel3))
+                                .addComponent(lblPatientBillingTable))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(274, 274, 274)
                                 .addComponent(btnAssignToMe)
                                 .addGap(69, 69, 69)
-                                .addComponent(processRequestBtn)))
+                                .addComponent(btnProcessRequest)))
                         .addGap(0, 255, Short.MAX_VALUE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane2))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(331, 331, 331)
-                .addComponent(jLabel2)
+                .addComponent(lblInsuranceClaimStatusTable)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -227,36 +227,36 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addComponent(jLabel1))
+                        .addComponent(lblReceptionistPatientBillingArea))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(backJButton)))
+                        .addComponent(btnBack)))
                 .addGap(16, 16, 16)
-                .addComponent(jLabel3)
+                .addComponent(lblPatientBillingTable)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnAssignToMe, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-                    .addComponent(processRequestBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnProcessRequest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31)
-                .addComponent(jLabel2)
+                .addComponent(lblInsuranceClaimStatusTable)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(228, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void processRequestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processRequestBtnActionPerformed
+    private void btnProcessRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessRequestActionPerformed
         // TODO add your handling code here:
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblWorkRequest.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row !");
             return;
         } else {
 
-            AccountantBillingRequest accountBillingRequest = (AccountantBillingRequest) workRequestJTable.getValueAt(selectedRow, 5);
+            AccountantBillingRequest accountBillingRequest = (AccountantBillingRequest) tblWorkRequest.getValueAt(selectedRow, 5);
 
             if (accountBillingRequest.getReceiver() != null) {
                 if (accountBillingRequest.getReceiver().equals(userAccount)) {
@@ -276,16 +276,16 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
             }
         }
 //        }
-    }//GEN-LAST:event_processRequestBtnActionPerformed
+    }//GEN-LAST:event_btnProcessRequestActionPerformed
 
     private void btnAssignToMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignToMeActionPerformed
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = tblWorkRequest.getSelectedRow();
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row !");
             return;
         } else {
-            WorkRequest request = (AccountantBillingRequest) workRequestJTable.getValueAt(selectedRow, 5);
+            WorkRequest request = (AccountantBillingRequest) tblWorkRequest.getValueAt(selectedRow, 5);
             if (request.getReceiver() == null) {
 
                 request.setReceiver(userAccount);
@@ -297,29 +297,29 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnAssignToMeActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
 
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
     private javax.swing.JButton btnAssignToMe;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnProcessRequest;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JButton processRequestBtn;
+    private javax.swing.JLabel lblInsuranceClaimStatusTable;
+    private javax.swing.JLabel lblPatientBillingTable;
+    private javax.swing.JLabel lblReceptionistPatientBillingArea;
     private javax.swing.JTable tblInsurance;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JTable tblWorkRequest;
     // End of variables declaration//GEN-END:variables
 
     public void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblWorkRequest.getModel();
 
         model.setRowCount(0);
 
@@ -342,7 +342,7 @@ public class ProcessMedicalBillingsJPanel extends javax.swing.JPanel {
         }
         
         TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
-        workRequestJTable.setRowSorter(sorter);
+        tblWorkRequest.setRowSorter(sorter);
 
     }
 

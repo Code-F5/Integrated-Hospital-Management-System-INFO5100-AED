@@ -18,7 +18,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author Dell
+ * @author VIRAJ
  */
 public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -48,19 +48,19 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblInsuranceFinanceWorkArea = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblFinance = new javax.swing.JTable();
-        btnAssign = new javax.swing.JButton();
-        processRequestBtn2 = new javax.swing.JButton();
+        btnAssignToSelf = new javax.swing.JButton();
+        btnProcessRequest = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel1.setText("INSURANCE FINACE WORK-AREA");
+        lblInsuranceFinanceWorkArea.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblInsuranceFinanceWorkArea.setForeground(new java.awt.Color(204, 0, 0));
+        lblInsuranceFinanceWorkArea.setText("INSURANCE FINANCE WORK-AREA");
 
-        tblFinance.setBackground(new java.awt.Color(0, 153, 255));
+        tblFinance.setBackground(new java.awt.Color(204, 204, 255));
         tblFinance.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -82,21 +82,21 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblFinance);
 
-        btnAssign.setBackground(new java.awt.Color(0, 153, 255));
-        btnAssign.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnAssign.setText("Assign To Self");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        btnAssignToSelf.setBackground(new java.awt.Color(0, 153, 255));
+        btnAssignToSelf.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnAssignToSelf.setText("Assign To Self");
+        btnAssignToSelf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                btnAssignToSelfActionPerformed(evt);
             }
         });
 
-        processRequestBtn2.setBackground(new java.awt.Color(0, 153, 255));
-        processRequestBtn2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        processRequestBtn2.setText("Process Request");
-        processRequestBtn2.addActionListener(new java.awt.event.ActionListener() {
+        btnProcessRequest.setBackground(new java.awt.Color(0, 153, 255));
+        btnProcessRequest.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnProcessRequest.setText("Process Request");
+        btnProcessRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processRequestBtn2ActionPerformed(evt);
+                btnProcessRequestActionPerformed(evt);
             }
         });
 
@@ -111,32 +111,32 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
                         .addComponent(jScrollPane1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(256, 256, 256)
-                        .addComponent(btnAssign, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                        .addComponent(btnAssignToSelf, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
                         .addGap(54, 54, 54)
-                        .addComponent(processRequestBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                        .addComponent(btnProcessRequest, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
                         .addGap(261, 261, 261)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(299, 299, 299)
-                .addComponent(jLabel1)
+                .addComponent(lblInsuranceFinanceWorkArea)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(jLabel1)
+                .addComponent(lblInsuranceFinanceWorkArea)
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(processRequestBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(btnAssign, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
+                    .addComponent(btnProcessRequest, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(btnAssignToSelf, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
                 .addGap(268, 268, 268))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
+    private void btnAssignToSelfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignToSelfActionPerformed
         int selectedRow = tblFinance.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
@@ -152,9 +152,9 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Can't assign this work request, as the work request is in " + request.getStatus() + " status", "Warning!", JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_btnAssignToSelfActionPerformed
 
-    private void processRequestBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processRequestBtn2ActionPerformed
+    private void btnProcessRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessRequestActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblFinance.getSelectedRow();
         if (selectedRow < 0) {
@@ -191,14 +191,14 @@ public class InsuranceFinanceWorkAreaJPanel extends javax.swing.JPanel {
 
             }
         }
-    }//GEN-LAST:event_processRequestBtn2ActionPerformed
+    }//GEN-LAST:event_btnProcessRequestActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnAssignToSelf;
+    private javax.swing.JButton btnProcessRequest;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton processRequestBtn2;
+    private javax.swing.JLabel lblInsuranceFinanceWorkArea;
     private javax.swing.JTable tblFinance;
     // End of variables declaration//GEN-END:variables
 

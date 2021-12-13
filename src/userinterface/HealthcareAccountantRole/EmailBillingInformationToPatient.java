@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Dell
+ * @author VIRAJ
  */
 public class EmailBillingInformationToPatient extends javax.swing.JPanel {
 
@@ -47,22 +47,22 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblEmailBillingInfoToPatient = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        emailTxtFiled = new javax.swing.JTextArea();
+        txtEmailContent = new javax.swing.JTextArea();
         btnSendEmail = new javax.swing.JButton();
         btnClearText = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel1.setText("EMAIL BILLING INFORMATION TO PATIENT");
+        lblEmailBillingInfoToPatient.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblEmailBillingInfoToPatient.setForeground(new java.awt.Color(153, 0, 0));
+        lblEmailBillingInfoToPatient.setText("EMAIL BILLING INFORMATION TO PATIENT");
 
-        emailTxtFiled.setColumns(20);
-        emailTxtFiled.setRows(5);
-        jScrollPane1.setViewportView(emailTxtFiled);
+        txtEmailContent.setColumns(20);
+        txtEmailContent.setRows(5);
+        jScrollPane1.setViewportView(txtEmailContent);
 
         btnSendEmail.setBackground(new java.awt.Color(0, 153, 255));
         btnSendEmail.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -111,7 +111,7 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
                                 .addComponent(btnClearText, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(129, 129, 129)
-                                .addComponent(jLabel1)))
+                                .addComponent(lblEmailBillingInfoToPatient)))
                         .addGap(0, 125, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -122,7 +122,7 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblEmailBillingInfoToPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
@@ -138,8 +138,8 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSendEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendEmailActionPerformed
-        String text = emailTxtFiled.getText();
-        if (emailTxtFiled.getText().trim().equals("")) {
+        String text = txtEmailContent.getText();
+        if (txtEmailContent.getText().trim().equals("")) {
             JOptionPane.showConfirmDialog(null, "You have not typed anything");
             return;
         }
@@ -149,7 +149,7 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
     }//GEN-LAST:event_btnSendEmailActionPerformed
 
     private void btnClearTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearTextActionPerformed
-        emailTxtFiled.setText("");
+        txtEmailContent.setText("");
     }//GEN-LAST:event_btnClearTextActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -203,8 +203,8 @@ public class EmailBillingInformationToPatient extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnClearText;
     private javax.swing.JButton btnSendEmail;
-    private javax.swing.JTextArea emailTxtFiled;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblEmailBillingInfoToPatient;
+    private javax.swing.JTextArea txtEmailContent;
     // End of variables declaration//GEN-END:variables
 }
