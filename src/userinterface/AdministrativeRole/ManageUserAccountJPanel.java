@@ -108,7 +108,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         txtPassword = new javax.swing.JPasswordField();
         lblValidatePassword = new javax.swing.JLabel();
         txtPasswordConfirm = new javax.swing.JPasswordField();
-        jLabel7 = new javax.swing.JLabel();
+        lblManageUser = new javax.swing.JLabel();
         lblManageAccountImage = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -208,9 +208,9 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 0, 51));
-        jLabel7.setText("Manage User Account");
+        lblManageUser.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblManageUser.setForeground(new java.awt.Color(204, 0, 51));
+        lblManageUser.setText("Manage User Account");
 
         lblManageAccountImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/user-gif-4.gif"))); // NOI18N
 
@@ -224,7 +224,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
                         .addContainerGap()
                         .addComponent(btnBack)
                         .addGap(195, 195, 195)
-                        .addComponent(jLabel7))
+                        .addComponent(lblManageUser))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(150, 150, 150)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -268,7 +268,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel7)
+                    .addComponent(lblManageUser)
                     .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -457,10 +457,10 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox cbRole;
     private javax.swing.JComboBox cborganization;
     private javax.swing.JButton createUserJButton;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblEmployee;
     private javax.swing.JLabel lblManageAccountImage;
+    private javax.swing.JLabel lblManageUser;
     private javax.swing.JLabel lblOrgnization;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblRole;
