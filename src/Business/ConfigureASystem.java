@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Del
+ * @author Dell
  */
 public class ConfigureASystem {
     
