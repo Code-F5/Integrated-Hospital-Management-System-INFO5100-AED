@@ -35,30 +35,30 @@
                               </Group>
                               <EmptySpace min="53" pref="53" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="messageTxt" min="-2" pref="116" max="-2" attributes="0"/>
-                                  <Component id="populationTxt" min="-2" pref="116" max="-2" attributes="0"/>
-                                  <Component id="locationTxt" min="-2" pref="116" max="-2" attributes="0"/>
-                                  <Component id="amountTxt" min="-2" pref="116" max="-2" attributes="0"/>
+                                  <Component id="btnMessage" min="-2" pref="116" max="-2" attributes="0"/>
+                                  <Component id="btnPopulation" min="-2" pref="116" max="-2" attributes="0"/>
+                                  <Component id="btnLocation" min="-2" pref="116" max="-2" attributes="0"/>
+                                  <Component id="btnAmount" min="-2" pref="116" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="backJButton" min="-2" pref="99" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnBack" min="-2" pref="99" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+                              <Component id="lblTreasurerTitle" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="198" max="-2" attributes="0"/>
-                      <Component id="submitJButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnReject" min="-2" pref="116" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <Component id="jLabel6" min="-2" pref="237" max="-2" attributes="0"/>
+              <Component id="lblTreasurer" min="-2" pref="237" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -67,42 +67,42 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="backJButton" min="-2" pref="29" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnBack" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="lblTreasurerTitle" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="locationTxt" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnLocation" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="amountTxt" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAmount" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="populationTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPopulation" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="messageTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMessage" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnReject" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                          <Component id="submitJButton" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="btnSubmit" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" pref="221" max="-2" attributes="0"/>
+                      <Component id="lblTreasurer" min="-2" pref="221" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="132" max="32767" attributes="0"/>
@@ -111,7 +111,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="submitJButton">
+    <Component class="javax.swing.JButton" name="btnSubmit">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -122,10 +122,10 @@
         <Property name="text" type="java.lang.String" value="Disburse Amount"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitJButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="backJButton">
+    <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -136,7 +136,7 @@
         <Property name="text" type="java.lang.String" value="&lt;&lt;Back"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backJButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnReject">
@@ -161,7 +161,7 @@
         <Property name="text" type="java.lang.String" value="Message :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="messageTxt">
+    <Component class="javax.swing.JTextField" name="btnMessage">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -171,12 +171,12 @@
         <Property name="text" type="java.lang.String" value="Location :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="locationTxt">
+    <Component class="javax.swing.JTextField" name="btnLocation">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="populationTxt">
+    <Component class="javax.swing.JTextField" name="btnPopulation">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -189,7 +189,7 @@
         <Property name="text" type="java.lang.String" value="Population :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="amountTxt">
+    <Component class="javax.swing.JTextField" name="btnAmount">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -202,7 +202,7 @@
         <Property name="text" type="java.lang.String" value="Amount :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="lblTreasurerTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Monospaced" size="18" style="1"/>
@@ -213,10 +213,10 @@
         <Property name="text" type="java.lang.String" value="Treasurer Work-Area"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="lblTreasurer">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Images/treasure.gif"/>
+          <Image iconType="3" name="/Images/treasurer.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel6"/>
       </Properties>

@@ -52,13 +52,13 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         workRequestJTable = new javax.swing.JTable();
-        btnAssign = new javax.swing.JButton();
-        processRequestBtn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnAssigntoSelf = new javax.swing.JButton();
+        btnProcessRequest = new javax.swing.JButton();
+        lblSecretery = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        workRequestJTable.setBackground(new java.awt.Color(0, 153, 255));
+        workRequestJTable.setBackground(new java.awt.Color(204, 204, 255));
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -87,27 +87,27 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(workRequestJTable);
 
-        btnAssign.setBackground(new java.awt.Color(0, 153, 255));
-        btnAssign.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnAssign.setText("Assign to Self");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        btnAssigntoSelf.setBackground(new java.awt.Color(0, 153, 255));
+        btnAssigntoSelf.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnAssigntoSelf.setText("Assign to Self");
+        btnAssigntoSelf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                btnAssigntoSelfActionPerformed(evt);
             }
         });
 
-        processRequestBtn.setBackground(new java.awt.Color(0, 153, 255));
-        processRequestBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        processRequestBtn.setText("Process Request");
-        processRequestBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnProcessRequest.setBackground(new java.awt.Color(0, 153, 255));
+        btnProcessRequest.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnProcessRequest.setText("Process Request");
+        btnProcessRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processRequestBtnActionPerformed(evt);
+                btnProcessRequestActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel1.setText("SECRETERY WORK-AREA");
+        lblSecretery.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblSecretery.setForeground(new java.awt.Color(204, 0, 0));
+        lblSecretery.setText("SECRETERY WORK-AREA");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -120,30 +120,30 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 734, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(243, 243, 243)
-                        .addComponent(btnAssign)
+                        .addComponent(btnAssigntoSelf)
                         .addGap(71, 71, 71)
-                        .addComponent(processRequestBtn))
+                        .addComponent(btnProcessRequest))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(268, 268, 268)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblSecretery, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblSecretery, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(processRequestBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnAssigntoSelf, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnProcessRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(160, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
+    private void btnAssigntoSelfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssigntoSelfActionPerformed
         int selectedRow = workRequestJTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first from the table to view details");
@@ -159,9 +159,9 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Can't assign this work request, as the work request is in " + request.getStatus() + " status", "Warning!", JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_btnAssigntoSelfActionPerformed
 
-    private void processRequestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processRequestBtnActionPerformed
+    private void btnProcessRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessRequestActionPerformed
         // TODO add your handling code here:
 
         int selectedRow = workRequestJTable.getSelectedRow();
@@ -199,7 +199,7 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
             layout.next(jPanel);
 
         }
-    }//GEN-LAST:event_processRequestBtnActionPerformed
+    }//GEN-LAST:event_btnProcessRequestActionPerformed
 
     public void populateTable() {
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
@@ -227,10 +227,10 @@ public class SecretaryWorkAreaJPanel extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnAssigntoSelf;
+    private javax.swing.JButton btnProcessRequest;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton processRequestBtn;
+    private javax.swing.JLabel lblSecretery;
     private javax.swing.JTable workRequestJTable;
     // End of variables declaration//GEN-END:variables
 }
