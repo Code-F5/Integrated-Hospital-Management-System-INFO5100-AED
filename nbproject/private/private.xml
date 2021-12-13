@@ -4,9 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/userinterface/AdministrativeRole/EnterpriseAdminWorkAreaJPanel.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Enterprise/Enterprise.java</file>
             <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/userinterface/DoctorRole/DoctorWorkAreaJPanel.java</file>
             <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/userinterface/DoctorRole/ProvidePrescriptionJPanel.java</file>
             <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/userinterface/MainJFrame.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Organization/Organization.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Enterprise/GovernmentEnterprise.java</file>
+            <file>file:/C:/Users/Dell/Documents/NetBeansProjects/HomelessShelter/AED-Final/src/Business/Enterprise/LawEnforcementEnterprise.java</file>
         </group>
     </open-files>
 </project-private>
