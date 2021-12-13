@@ -6,29 +6,15 @@ package Business.WorkQueue;
 
 import java.util.ArrayList;
 
-
 public class WorkQueue {
-    
-    private ArrayList<WorkRequest> workRequestList;
+
+    private ArrayList<WorkRequest> workRequests;
 
     public WorkQueue() {
-        workRequestList = new ArrayList();
+        workRequests = new ArrayList();
     }
 
-    public ArrayList<WorkRequest> getWorkRequestList() {
-        return workRequestList;
+    public ArrayList<WorkRequest> getWorkRequests() {
+        return workRequests;
     }
-        public WorkRequest addWorkRequest(){
-         WorkRequest w = new WorkRequest();
-        workRequestList.add(w);
-        return w;
-    }
-     public WorkRequest addWorkRequest(WorkRequest w){
-        workRequestList.add(w);
-        return w;
-    }
-    public void removeWorkRequest(WorkRequest w) {
-        workRequestList.remove(w);
-    }
-    
 }

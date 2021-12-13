@@ -5,71 +5,59 @@
  */
 package Business;
 
-import Business.Organization.Organization;
 import Business.Network.Network;
+import Business.Organization.Organization;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
-import Business.UserAccount.UserAccount;
-import Business.Volunteer.VolunteerDirectory;
 import java.util.ArrayList;
-import javax.swing.JPanel;
 
-/**
- *
- * @author Dell
- */
+// Extending Organization from ECosystem
 public class EcoSystem extends Organization{
     
-    private static EcoSystem business;
-    private ArrayList<Network> networkList;
+    private static EcoSystem ecosystem;
+    private ArrayList<Network> networks;
     public static EcoSystem getInstance(){
-        if(business==null){
-            business=new EcoSystem();
+        if(ecosystem==null){
+            ecosystem=new EcoSystem();
         }
-        return business;
+        return ecosystem;
     }
     
     public Network createAndAddNetwork(){
         Network network=new Network();
-        networkList.add(network);
+        networks.add(network);
         return network;
     }
+    //Overriding Support role
+    //Created ArrayList of Role
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roleList=new ArrayList<Role>();
-        roleList.add(new SystemAdminRole() {
-            
-            public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        });
+        roleList.add(new SystemAdminRole());
         return roleList;
     }
     private EcoSystem(){
         super(null);
-        networkList=new ArrayList<Network>();
+        networks=new ArrayList<Network>();
     }
-
-    public ArrayList<Network> getNetworkList() {
-        return networkList;
+    //ArrayList of <Network> calling function getNetwork() 
+    public ArrayList<Network> getNetworks() {
+        return networks;
     }
-
-    public void setNetworkList(ArrayList<Network> networkList) {
-        this.networkList = networkList;
+    //ArrayList of <Network> calling function setNetwork()
+    public void setNetworks(ArrayList<Network> networks) {
+        this.networks = networks;
     }
     
-    public boolean checkIfUserIsUnique(String userName){
-        if(!this.getUserAccountDirectory().checkIfUsernameIsUnique(userName)){
+    //Defining boolean function for Unique User
+    public boolean IsUserUnique(String userName){
+        if(!this.getUserAccountDirectory().isUserUnique(userName)){
             return false;
         }
-        for(Network network:networkList){
+        for(Network network:networks){
             
         }
         return true;
     }
-
-    public VolunteerDirectory getVolunteerDirectory() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }
+// Completed code for EcoSystem

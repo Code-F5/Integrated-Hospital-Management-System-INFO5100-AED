@@ -13,47 +13,46 @@ import java.util.ArrayList;
 
 public abstract class Organization {
 
-    private String name;
+    private String organizationName;
     private WorkQueue workQueue;
     private EmployeeDirectory employeeDirectory;
     private UserAccountDirectory userAccountDirectory;
     private int organizationID;
-    private static int counter=0;
+    private static int counter = 0;
+    
 
-   
+    public enum Type {
 
-   
-    public enum Type{
-        Admin("Admin Organization"),
-        NGO("NGO Organization"),
-        Treasurer("Treasurer Organization"),
-        Instructor("Instructor Organization"),
-        Rehabilitation("Rehabilitation Organization"),
-        SocialWorker("SocialWorker Organization"),
-        Donor("Donor Organization");
+        //HealthCenter Organization Types:
+        Admin("Admin Organization"), Doctor("Doctor Organization"), Lab("Lab Organization"), Patient("Patient Organization"), Accountant("Accountant Organization"),
+        //Insurance Organization Types:
+        InsuranceAgent("Insurance Agent Organization"), PolicyPlanner("Insurance Policy Planning Organization"), InsuranceFundOrganization("Insurance Finance Organization"),
+        //Government Organization Types
+        GovernmentAccountant("Treasurer Organization"), GovernmentSecretary("Secretary Organization"), HealthcareChief("Healthcare Officer Organization");
         
+
         private String value;
+
         private Type(String value) {
             this.value = value;
         }
+
         public String getValue() {
             return value;
         }
     }
 
     public Organization(String name) {
-        this.name = name;
+        this.organizationName = name;
         workQueue = new WorkQueue();
         employeeDirectory = new EmployeeDirectory();
         userAccountDirectory = new UserAccountDirectory();
         organizationID = counter;
         ++counter;
     }
-    public Organization(){
-        
-    }
+
     public abstract ArrayList<Role> getSupportedRole();
-    
+
     public UserAccountDirectory getUserAccountDirectory() {
         return userAccountDirectory;
     }
@@ -65,9 +64,9 @@ public abstract class Organization {
     public EmployeeDirectory getEmployeeDirectory() {
         return employeeDirectory;
     }
-    
+
     public String getName() {
-        return name;
+        return organizationName;
     }
 
     public WorkQueue getWorkQueue() {
@@ -75,7 +74,7 @@ public abstract class Organization {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.organizationName = name;
     }
 
     public void setWorkQueue(WorkQueue workQueue) {
@@ -84,8 +83,7 @@ public abstract class Organization {
 
     @Override
     public String toString() {
-        return name;
+        return organizationName;
     }
-    
-    
+
 }
