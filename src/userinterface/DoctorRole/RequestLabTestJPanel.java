@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Dell
+ * @author VIRAJ
  */
 public class RequestLabTestJPanel extends javax.swing.JPanel {
 
@@ -35,8 +35,8 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.userAccount = account;
         this.patientTreatmentWorkRequest = patientTreatmentWorkRequest;
-        valueLabel.setText(enterprise.getName());
-        requestTestJButton.setEnabled(true);
+        lblValue.setText(enterprise.getName());
+        btnRequestTest.setEnabled(true);
     }
 
     /**
@@ -48,72 +48,72 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        requestTestJButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        txtLabMessage = new javax.swing.JTextField();
-        backJButton = new javax.swing.JButton();
-        valueLabel = new javax.swing.JLabel();
-        enterpriseLabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        btnRequestTest = new javax.swing.JButton();
+        lblMessage = new javax.swing.JLabel();
+        txtMessage = new javax.swing.JTextField();
+        btnBack = new javax.swing.JButton();
+        lblValue = new javax.swing.JLabel();
+        lblEnterprise = new javax.swing.JLabel();
+        lblLabType = new javax.swing.JLabel();
         txtLabType = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblRequestLabTest = new javax.swing.JLabel();
+        lblPhoto = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        requestTestJButton.setBackground(new java.awt.Color(0, 102, 255));
-        requestTestJButton.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        requestTestJButton.setText("Request Test");
-        requestTestJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnRequestTest.setBackground(new java.awt.Color(0, 102, 255));
+        btnRequestTest.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnRequestTest.setText("Request Test");
+        btnRequestTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                requestTestJButtonActionPerformed(evt);
+                btnRequestTestActionPerformed(evt);
             }
         });
-        add(requestTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 130, 30));
+        add(btnRequestTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 130, 30));
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel1.setText("Message:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 80, -1));
-        add(txtLabMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 130, 30));
+        lblMessage.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblMessage.setText("Message:");
+        add(lblMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 60, -1));
+        add(txtMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 130, 30));
 
-        backJButton.setBackground(new java.awt.Color(255, 51, 51));
-        backJButton.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        backJButton.setText("<<Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setBackground(new java.awt.Color(255, 51, 51));
+        btnBack.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnBack.setText("<<Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 100, 30));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 100, 30));
 
-        valueLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 130, 20));
+        lblValue.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblValue.setText("<value>");
+        add(lblValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 130, 20));
 
-        enterpriseLabel.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        enterpriseLabel.setText("Enterprise :");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 100, 20));
+        lblEnterprise.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblEnterprise.setText("Enterprise :");
+        add(lblEnterprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 100, 20));
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel2.setText("Lab Type:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 150, 70, -1));
+        lblLabType.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblLabType.setText("Lab Type:");
+        add(lblLabType, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 150, 70, -1));
         add(txtLabType, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 130, 30));
 
-        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel3.setText("REQUEST LAB TEST");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 190, -1));
+        lblRequestLabTest.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblRequestLabTest.setForeground(new java.awt.Color(204, 0, 0));
+        lblRequestLabTest.setText("REQUEST LAB TEST");
+        add(lblRequestLabTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 190, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab1.jpg"))); // NOI18N
-        jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 510, 480));
+        lblPhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lab1.jpg"))); // NOI18N
+        lblPhoto.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(lblPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 510, 480));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
+    private void btnRequestTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestTestActionPerformed
 
         String labType = txtLabType.getText().trim();
-        String message = txtLabMessage.getText().trim();
+        String message = txtMessage.getText().trim();
 
         if (labType.equals("")) {
             JOptionPane.showMessageDialog(null, "Lap type is mandatory!");
@@ -140,14 +140,14 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             org.getWorkQueue().getWorkRequests().add(patientTreatmentWorkRequest);
             userAccount.getWorkQueue().getWorkRequests().add(patientTreatmentWorkRequest);
             JOptionPane.showMessageDialog(null, "Lab request sent");
-            txtLabMessage.setText("");
+            txtMessage.setText("");
             txtLabType.setText("");
-            requestTestJButton.setEnabled(false);
+            btnRequestTest.setEnabled(false);
         }
 
-    }//GEN-LAST:event_requestTestJButtonActionPerformed
+    }//GEN-LAST:event_btnRequestTestActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -157,18 +157,18 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
 
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JLabel enterpriseLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JButton requestTestJButton;
-    private javax.swing.JTextField txtLabMessage;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnRequestTest;
+    private javax.swing.JLabel lblEnterprise;
+    private javax.swing.JLabel lblLabType;
+    private javax.swing.JLabel lblMessage;
+    private javax.swing.JLabel lblPhoto;
+    private javax.swing.JLabel lblRequestLabTest;
+    private javax.swing.JLabel lblValue;
     private javax.swing.JTextField txtLabType;
-    private javax.swing.JLabel valueLabel;
+    private javax.swing.JTextField txtMessage;
     // End of variables declaration//GEN-END:variables
 }

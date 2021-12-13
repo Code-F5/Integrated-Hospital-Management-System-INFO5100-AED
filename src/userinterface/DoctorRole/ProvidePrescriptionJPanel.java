@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Dell
+ * @author VIRAJ
  */
 public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
 
@@ -45,62 +45,39 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblProvidePrescription = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txtFirstName = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        txtLastName = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        lblFirstName = new javax.swing.JLabel();
         txtAge = new javax.swing.JTextField();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblLastName = new javax.swing.JLabel();
+        txtLastName = new javax.swing.JTextField();
+        lblAssignedDoctorInformation = new javax.swing.JLabel();
+        lblAge = new javax.swing.JLabel();
+        lblPrescribeAndFeedback = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtPrescription = new javax.swing.JTextArea();
-        jLabel4 = new javax.swing.JLabel();
+        lblPatientMedicalCondition = new javax.swing.JLabel();
         txtMedicalCondition = new javax.swing.JTextField();
         txtAssignedDoctor = new javax.swing.JTextField();
         btnSubmit = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setEnabled(false);
-        setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel1.setText("Provide Prescription");
-        add(jLabel1);
-        jLabel1.setBounds(370, 30, 230, 25);
+        lblProvidePrescription.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblProvidePrescription.setForeground(new java.awt.Color(204, 0, 0));
+        lblProvidePrescription.setText("Provide Prescription");
 
         jLabel6.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 14)); // NOI18N
         jLabel6.setText("PATIENT INFORMATION");
-        add(jLabel6);
-        jLabel6.setBounds(330, 110, 200, 16);
 
         txtFirstName.setEditable(false);
-        add(txtFirstName);
-        txtFirstName.setBounds(244, 146, 131, 23);
 
-        jLabel7.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel7.setText("First Name :");
-        add(jLabel7);
-        jLabel7.setBounds(140, 150, 84, 17);
-
-        jLabel10.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel10.setText("Last Name :");
-        add(jLabel10);
-        jLabel10.setBounds(425, 148, 77, 17);
-
-        txtLastName.setEditable(false);
-        add(txtLastName);
-        txtLastName.setBounds(510, 150, 131, 23);
-
-        jLabel8.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel8.setText("Assigned Doctor Information :");
-        add(jLabel8);
-        jLabel8.setBounds(30, 220, 203, 17);
+        lblFirstName.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblFirstName.setText("First Name:");
 
         txtAge.setEditable(false);
         txtAge.addActionListener(new java.awt.event.ActionListener() {
@@ -108,38 +85,31 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
                 txtAgeActionPerformed(evt);
             }
         });
-        add(txtAge);
-        txtAge.setBounds(510, 190, 131, 23);
 
-        jLabel27.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel27.setText("Age :");
-        add(jLabel27);
-        jLabel27.setBounds(460, 190, 35, 17);
+        lblLastName.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblLastName.setText("Last Name :");
 
-        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel3.setText("PRESCRIPTION AND FEEDBACK");
-        add(jLabel3);
-        jLabel3.setBounds(280, 290, 200, 17);
+        txtLastName.setEditable(false);
+
+        lblAssignedDoctorInformation.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblAssignedDoctorInformation.setText("Assigned Doctor Information:");
+
+        lblAge.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblAge.setText("Age :");
+
+        lblPrescribeAndFeedback.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblPrescribeAndFeedback.setText("PRESCRIPTION AND FEEDBACK");
 
         txtPrescription.setColumns(20);
         txtPrescription.setRows(5);
         jScrollPane1.setViewportView(txtPrescription);
 
-        add(jScrollPane1);
-        jScrollPane1.setBounds(170, 320, 410, 120);
-
-        jLabel4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel4.setText("Patient Medical Condition :");
-        add(jLabel4);
-        jLabel4.setBounds(40, 190, 189, 17);
+        lblPatientMedicalCondition.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblPatientMedicalCondition.setText("Patient Medical Condition:");
 
         txtMedicalCondition.setEditable(false);
-        add(txtMedicalCondition);
-        txtMedicalCondition.setBounds(245, 184, 130, 23);
 
         txtAssignedDoctor.setEditable(false);
-        add(txtAssignedDoctor);
-        txtAssignedDoctor.setBounds(244, 222, 131, 23);
 
         btnSubmit.setBackground(new java.awt.Color(255, 204, 204));
         btnSubmit.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -149,24 +119,127 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit);
-        btnSubmit.setBounds(320, 480, 110, 30);
 
-        backJButton.setBackground(new java.awt.Color(255, 51, 51));
-        backJButton.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        backJButton.setText("<< Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setBackground(new java.awt.Color(255, 51, 51));
+        btnBack.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnBack.setText("<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(29, 11, 90, 25);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doctor2.gif"))); // NOI18N
-        add(jLabel2);
-        jLabel2.setBounds(610, -100, 360, 1020);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(371, 371, 371)
+                        .addComponent(lblProvidePrescription, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(lblPatientMedicalCondition))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblAssignedDoctorInformation))))
+                        .addGap(25, 25, 25)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtAssignedDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(86, 86, 86)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(lblPrescribeAndFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtMedicalCondition, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(89, 89, 89)
+                                        .addComponent(lblAge))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lblLastName)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(324, 324, 324)
+                        .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(284, 284, 284)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtMedicalCondition, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblPatientMedicalCondition))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblAge))))
+                        .addGap(9, 9, 9)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtAssignedDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblAssignedDoctorInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(210, 210, 210)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(390, 390, 390)
+                        .addComponent(lblPrescribeAndFeedback))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(250, 250, 250)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblLastName)))
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(btnBack))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(lblProvidePrescription))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(246, 246, 246)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblFirstName)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(420, 420, 420)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
@@ -189,7 +262,7 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
         }        
     }//GEN-LAST:event_btnSubmitActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -198,22 +271,22 @@ public class ProvidePrescriptionJPanel extends javax.swing.JPanel {
         dwjp.populateRequestTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSubmit;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblAge;
+    private javax.swing.JLabel lblAssignedDoctorInformation;
+    private javax.swing.JLabel lblFirstName;
+    private javax.swing.JLabel lblLastName;
+    private javax.swing.JLabel lblPatientMedicalCondition;
+    private javax.swing.JLabel lblPrescribeAndFeedback;
+    private javax.swing.JLabel lblProvidePrescription;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtAssignedDoctor;
     private javax.swing.JTextField txtFirstName;

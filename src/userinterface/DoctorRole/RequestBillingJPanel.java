@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Dell 
+ * @author VIRAJ
  */
 public class RequestBillingJPanel extends javax.swing.JPanel {
 
@@ -52,74 +52,74 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        lblBillingRequest = new javax.swing.JLabel();
+        lblPatientInfo = new javax.swing.JLabel();
         txtFirstName = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        lblFirstName = new javax.swing.JLabel();
+        lblLastName = new javax.swing.JLabel();
         txtLastName = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        lblAssignedDoctor = new javax.swing.JLabel();
         txtAssignedDoctor = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        lblPatientId = new javax.swing.JLabel();
         txtPatientId = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        txtConsultationCharges = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        txtMedicationCharges = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        txtLabCharges = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        txtMiscellaneousCharges = new javax.swing.JTextField();
-        btnSendBillingRequest = new javax.swing.JButton();
-        backBtn = new javax.swing.JButton();
+        jLabel43 = new javax.swing.JLabel();
+        txtConsultationFees = new javax.swing.JTextField();
+        jLabel53 = new javax.swing.JLabel();
+        txtMedicationFees = new javax.swing.JTextField();
+        jLabel113 = new javax.swing.JLabel();
+        txtLabFees = new javax.swing.JTextField();
+        jLabel123 = new javax.swing.JLabel();
+        txtMiscellaneousFees = new javax.swing.JTextField();
+        btnRequestBill = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel1.setText("BILLING REQUEST");
-        add(jLabel1);
-        jLabel1.setBounds(320, 30, 180, 25);
+        lblBillingRequest.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblBillingRequest.setForeground(new java.awt.Color(204, 0, 0));
+        lblBillingRequest.setText("BILLING REQUEST");
+        add(lblBillingRequest);
+        lblBillingRequest.setBounds(320, 30, 180, 25);
 
-        jLabel6.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 14)); // NOI18N
-        jLabel6.setText("PATIENT INFORMATION");
-        add(jLabel6);
-        jLabel6.setBounds(310, 80, 190, 15);
+        lblPatientInfo.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 14)); // NOI18N
+        lblPatientInfo.setText("PATIENT INFORMATION");
+        add(lblPatientInfo);
+        lblPatientInfo.setBounds(330, 80, 170, 15);
 
         txtFirstName.setEditable(false);
         add(txtFirstName);
         txtFirstName.setBounds(200, 122, 131, 23);
 
-        jLabel7.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel7.setText("First Name :");
-        add(jLabel7);
-        jLabel7.setBounds(90, 120, 90, 15);
+        lblFirstName.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblFirstName.setText("First Name :");
+        add(lblFirstName);
+        lblFirstName.setBounds(90, 120, 90, 20);
 
-        jLabel10.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel10.setText("Last Name :");
-        add(jLabel10);
-        jLabel10.setBounds(360, 120, 77, 17);
+        lblLastName.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblLastName.setText("Last Name :");
+        add(lblLastName);
+        lblLastName.setBounds(357, 120, 80, 17);
 
         txtLastName.setEditable(false);
         add(txtLastName);
         txtLastName.setBounds(450, 120, 131, 23);
 
-        jLabel8.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel8.setText("Assigned Doctor :");
-        add(jLabel8);
-        jLabel8.setBounds(60, 160, 119, 17);
+        lblAssignedDoctor.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblAssignedDoctor.setText("Assigned Doctor :");
+        add(lblAssignedDoctor);
+        lblAssignedDoctor.setBounds(50, 160, 130, 17);
 
         txtAssignedDoctor.setEditable(false);
         add(txtAssignedDoctor);
         txtAssignedDoctor.setBounds(200, 160, 130, 23);
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel2.setText("Patient Id:");
-        add(jLabel2);
-        jLabel2.setBounds(360, 160, 77, 17);
+        lblPatientId.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblPatientId.setText("Patient Id:");
+        add(lblPatientId);
+        lblPatientId.setBounds(357, 160, 80, 17);
 
         txtPatientId.setEditable(false);
         add(txtPatientId);
@@ -128,69 +128,91 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("BILLING INFORMATION");
         add(jLabel3);
-        jLabel3.setBounds(273, 225, 138, 15);
+        jLabel3.setBounds(330, 220, 150, 15);
 
-        jLabel4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel4.setText("Consultaion Charges (USD) :");
-        add(jLabel4);
-        jLabel4.setBounds(160, 260, 189, 21);
+        jLabel43.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel43.setText("Consultaion Charges (USD) :");
+        add(jLabel43);
+        jLabel43.setBounds(229, 260, 200, 21);
 
-        txtConsultationCharges.addActionListener(new java.awt.event.ActionListener() {
+        txtConsultationFees.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtConsultationChargesActionPerformed(evt);
+                txtConsultationFeesActionPerformed(evt);
             }
         });
-        add(txtConsultationCharges);
-        txtConsultationCharges.setBounds(370, 260, 82, 23);
-
-        jLabel5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel5.setText("Medication Charges (USD):");
-        add(jLabel5);
-        jLabel5.setBounds(170, 320, 175, 21);
-        add(txtMedicationCharges);
-        txtMedicationCharges.setBounds(370, 320, 82, 23);
-
-        jLabel11.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel11.setText("Lab Test Charges (USD) :");
-        add(jLabel11);
-        jLabel11.setBounds(180, 290, 168, 21);
-
-        txtLabCharges.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtLabChargesActionPerformed(evt);
+        txtConsultationFees.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtConsultationFeesKeyTyped(evt);
             }
         });
-        add(txtLabCharges);
-        txtLabCharges.setBounds(370, 290, 82, 23);
+        add(txtConsultationFees);
+        txtConsultationFees.setBounds(450, 260, 82, 23);
 
-        jLabel12.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        jLabel12.setText("Miscellaneous Charges (USD):");
-        add(jLabel12);
-        jLabel12.setBounds(150, 350, 196, 17);
-        add(txtMiscellaneousCharges);
-        txtMiscellaneousCharges.setBounds(370, 350, 82, 23);
+        jLabel53.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel53.setText("Medication Charges (USD):");
+        add(jLabel53);
+        jLabel53.setBounds(245, 320, 180, 21);
 
-        btnSendBillingRequest.setBackground(new java.awt.Color(0, 153, 255));
-        btnSendBillingRequest.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnSendBillingRequest.setText("Send Billing Request");
-        btnSendBillingRequest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSendBillingRequestActionPerformed(evt);
+        txtMedicationFees.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMedicationFeesKeyTyped(evt);
             }
         });
-        add(btnSendBillingRequest);
-        btnSendBillingRequest.setBounds(300, 400, 180, 32);
+        add(txtMedicationFees);
+        txtMedicationFees.setBounds(450, 320, 82, 23);
 
-        backBtn.setBackground(new java.awt.Color(255, 0, 51));
-        backBtn.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        backBtn.setText("<<Back");
-        backBtn.addActionListener(new java.awt.event.ActionListener() {
+        jLabel113.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel113.setText("Lab Test Charges (USD) :");
+        add(jLabel113);
+        jLabel113.setBounds(250, 290, 180, 21);
+
+        txtLabFees.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBtnActionPerformed(evt);
+                txtLabFeesActionPerformed(evt);
             }
         });
-        add(backBtn);
-        backBtn.setBounds(30, 20, 90, 25);
+        txtLabFees.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtLabFeesKeyTyped(evt);
+            }
+        });
+        add(txtLabFees);
+        txtLabFees.setBounds(450, 290, 82, 23);
+
+        jLabel123.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel123.setText("Miscellaneous Charges (USD):");
+        add(jLabel123);
+        jLabel123.setBounds(220, 350, 210, 17);
+
+        txtMiscellaneousFees.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMiscellaneousFeesKeyTyped(evt);
+            }
+        });
+        add(txtMiscellaneousFees);
+        txtMiscellaneousFees.setBounds(450, 350, 82, 23);
+
+        btnRequestBill.setBackground(new java.awt.Color(0, 153, 255));
+        btnRequestBill.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnRequestBill.setText("Send Billing Request");
+        btnRequestBill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRequestBillActionPerformed(evt);
+            }
+        });
+        add(btnRequestBill);
+        btnRequestBill.setBounds(300, 400, 180, 32);
+
+        btnBack.setBackground(new java.awt.Color(255, 0, 51));
+        btnBack.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnBack.setText("<<Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+        add(btnBack);
+        btnBack.setBounds(30, 20, 90, 25);
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/billing6.gif"))); // NOI18N
@@ -200,51 +222,27 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         jLabel9.setBounds(158, 5, 560, 490);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtLabChargesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLabChargesActionPerformed
+    private void txtLabFeesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLabFeesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtLabChargesActionPerformed
+    }//GEN-LAST:event_txtLabFeesActionPerformed
 
-    private void txtConsultationChargesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConsultationChargesActionPerformed
+    private void txtConsultationFeesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConsultationFeesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtConsultationChargesActionPerformed
+    }//GEN-LAST:event_txtConsultationFeesActionPerformed
 
-    private void btnSendBillingRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendBillingRequestActionPerformed
-        String consultationCharge = txtConsultationCharges.getText().trim();
-        String labChargesStr = txtLabCharges.getText();
-        String miscellaneouschargesStr = txtMiscellaneousCharges.getText();
-        String medicationChargesStr = txtMedicationCharges.getText();
-        if (consultationCharge.equals("") || labChargesStr.equals("") || miscellaneouschargesStr.equals("") || medicationChargesStr.equals("")) {
-            JOptionPane.showMessageDialog(null, "All fields are mandatory");
+    private void btnRequestBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestBillActionPerformed
+//        String consultationCharge = txtConsultationFees.getText().trim();
+//        String labChargesStr = txtLabFees.getText();
+//        String miscellaneouschargesStr = txtMiscellaneousFees.getText();
+//        String medicationChargesStr = txtMedicationFees.getText();
+        if (txtConsultationFees.getText().trim().isEmpty()|| txtLabFees.getText().trim().isEmpty() || txtMiscellaneousFees.getText().trim().isEmpty() || txtMedicationFees.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "All fields are mandatory.");
         } else {
             
-            try {
-                Double.parseDouble(consultationCharge);
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Please provide a Numeric value for Consultation Charges");
-                return;
-            }
             
-            try {
-                Integer.parseInt(labChargesStr);
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Please type a Numeric value for Lab Charges");
-                return;
-            }
-            try {
-                Integer.parseInt(miscellaneouschargesStr);
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Please type a Numeric value for Miscellaneous charges");
-                return;
-            }
-            try {
-                Integer.parseInt(medicationChargesStr);
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Please type a Numeric value for Medication charges");
-                return;
-            }
-            double labCharges = Double.parseDouble(labChargesStr);
-            double miscellaneouscharges = Double.parseDouble(miscellaneouschargesStr);
-            double medicationCharges = Double.parseDouble(medicationChargesStr);
+            double labCharges = Double.parseDouble(txtLabFees.getText());
+            double miscellaneouscharges = Double.parseDouble(txtMiscellaneousFees.getText());
+            double medicationCharges = Double.parseDouble(txtMedicationFees.getText().trim());
             double billingAmount = labCharges + consultationCharges + medicationCharges + miscellaneouscharges;
             //request.setBillAmount(billingAmount);
 
@@ -273,13 +271,13 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
                 }
 
                 JOptionPane.showMessageDialog(null, "Prescription submitted successfully");
-                btnSendBillingRequest.setEnabled(false);
+                btnRequestBill.setEnabled(false);
             }
         }
 
-    }//GEN-LAST:event_btnSendBillingRequestActionPerformed
+    }//GEN-LAST:event_btnRequestBillActionPerformed
 
-    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -288,31 +286,59 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         dwjp.populateRequestTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backBtnActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void txtConsultationFeesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConsultationFeesKeyTyped
+        char c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtConsultationFeesKeyTyped
+
+    private void txtLabFeesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtLabFeesKeyTyped
+        char c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtLabFeesKeyTyped
+
+    private void txtMedicationFeesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMedicationFeesKeyTyped
+        char c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtMedicationFeesKeyTyped
+
+    private void txtMiscellaneousFeesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMiscellaneousFeesKeyTyped
+        char c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtMiscellaneousFeesKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backBtn;
-    private javax.swing.JButton btnSendBillingRequest;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnRequestBill;
+    private javax.swing.JLabel jLabel113;
+    private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lblAssignedDoctor;
+    private javax.swing.JLabel lblBillingRequest;
+    private javax.swing.JLabel lblFirstName;
+    private javax.swing.JLabel lblLastName;
+    private javax.swing.JLabel lblPatientId;
+    private javax.swing.JLabel lblPatientInfo;
     private javax.swing.JTextField txtAssignedDoctor;
-    private javax.swing.JTextField txtConsultationCharges;
+    private javax.swing.JTextField txtConsultationFees;
     private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtLabCharges;
+    private javax.swing.JTextField txtLabFees;
     private javax.swing.JTextField txtLastName;
-    private javax.swing.JTextField txtMedicationCharges;
-    private javax.swing.JTextField txtMiscellaneousCharges;
+    private javax.swing.JTextField txtMedicationFees;
+    private javax.swing.JTextField txtMiscellaneousFees;
     private javax.swing.JTextField txtPatientId;
     // End of variables declaration//GEN-END:variables
 
@@ -322,7 +348,7 @@ public class RequestBillingJPanel extends javax.swing.JPanel {
         txtLastName.setText(patientTreatmentWorkRequest.getPatient().getLastName());
         txtPatientId.setText(String.valueOf(patientTreatmentWorkRequest.getPatient().getId()));
         txtAssignedDoctor.setText(patientTreatmentWorkRequest.getAssignedDoctor().getEmployee().getEmployeename());
-        txtConsultationCharges.setText(String.valueOf(consultationCharges));
+        txtConsultationFees.setText(String.valueOf(consultationCharges));
 
     }
 }

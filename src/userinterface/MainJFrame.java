@@ -57,6 +57,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         container = new javax.swing.JPanel();
         imageLbl = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -175,14 +176,19 @@ public class MainJFrame extends javax.swing.JFrame {
         imageLbl.setBackground(new java.awt.Color(255, 255, 255));
         imageLbl.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         imageLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/image.jpg"))); // NOI18N
+        imageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ihms.jpg"))); // NOI18N
         imageLbl.setToolTipText("");
         imageLbl.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        imageLbl.setMaximumSize(new java.awt.Dimension(1000, 800));
+        imageLbl.setMaximumSize(new java.awt.Dimension(1000, 1000));
         imageLbl.setMinimumSize(new java.awt.Dimension(800, 400));
         imageLbl.setPreferredSize(new java.awt.Dimension(500, 500));
         imageLbl.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         container.add(imageLbl, "card2");
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 34)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel3.setText("INTEGRATED HOSPITAL MANAGEMENT SYSTEM");
+        container.add(jLabel3, "card3");
 
         jSplitPane1.setRightComponent(container);
 
@@ -328,6 +334,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel imageLbl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel loginJLabel;
