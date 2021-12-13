@@ -28,7 +28,7 @@ public abstract class Organization {
         //Insurance Organization Types:
         InsuranceAgent("Insurance Agent Organization"), PolicyPlanner("Insurance Policy Planning Organization"), InsuranceFundOrganization("Insurance Finance Organization"),
         //Government Organization Types
-        GovernmentAccountant("Treasurer Organization"), GovernmentSecretary("Secretary Organization"), HealthcareChief("Healthcare Officer Organization");
+        GovernmentAccountant("Treasurer Organization"), GovernmentSecretary("Secretary Organization"), HealthcareChief("Healthcare Officer Organization"),EnforceChief("Enforce Officer Organization");
         
 
         private String value;
