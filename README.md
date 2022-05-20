@@ -1,4 +1,5 @@
-AED Final Project group
+Application Engineering And Development INFO5100 
+## Integrated Hospital Management System : Final Project
 
 1. Sumit Patil NUID: 002985101
 
